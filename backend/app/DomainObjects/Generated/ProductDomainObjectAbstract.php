@@ -39,6 +39,7 @@ abstract class ProductDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
     final public const WAITLIST_ENABLED = 'waitlist_enabled';
     final public const IS_ADDON_ONLY = 'is_addon_only';
     final public const SEQUENTIAL_TIER_RELEASE_ENABLED = 'sequential_tier_release_enabled';
+    final public const ADDON_MAX_PER_PARENT = 'addon_max_per_parent';
 
     protected int $id;
     protected int $event_id;
@@ -69,6 +70,7 @@ abstract class ProductDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
     protected ?bool $waitlist_enabled = null;
     protected bool $is_addon_only = false;
     protected bool $sequential_tier_release_enabled = false;
+    protected ?int $addon_max_per_parent = null;
 
     public function toArray(): array
     {
@@ -102,6 +104,7 @@ abstract class ProductDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
                     'waitlist_enabled' => $this->waitlist_enabled ?? null,
                     'is_addon_only' => $this->is_addon_only ?? null,
                     'sequential_tier_release_enabled' => $this->sequential_tier_release_enabled ?? null,
+                    'addon_max_per_parent' => $this->addon_max_per_parent ?? null,
                 ];
     }
 
@@ -422,5 +425,16 @@ abstract class ProductDomainObjectAbstract extends \HiEvents\DomainObjects\Abstr
     public function getSequentialTierReleaseEnabled(): bool
     {
         return $this->sequential_tier_release_enabled;
+    }
+
+    public function setAddonMaxPerParent(?int $addon_max_per_parent): self
+    {
+        $this->addon_max_per_parent = $addon_max_per_parent;
+        return $this;
+    }
+
+    public function getAddonMaxPerParent(): ?int
+    {
+        return $this->addon_max_per_parent;
     }
 }

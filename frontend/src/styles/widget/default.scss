@@ -507,6 +507,14 @@
         font-size: 13.5px;
         margin-bottom: 2px;
         overflow-wrap: anywhere;
+
+        .hi-product-addon-limit-note {
+          margin-left: 8px;
+          font-weight: 500;
+          font-size: 11.5px;
+          color: var(--hi-muted);
+          white-space: nowrap;
+        }
       }
 
       &.hi-product-addon-highlighted {

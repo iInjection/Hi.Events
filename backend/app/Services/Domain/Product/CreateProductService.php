@@ -103,6 +103,7 @@ class CreateProductService
             'highlight_message' => $productsData->getHighlightMessage(),
             'waitlist_enabled' => $productsData->getWaitlistEnabled(),
             'is_addon_only' => $productsData->getIsAddonOnly(),
+            'addon_max_per_parent' => $productsData->getAddonMaxPerParent(),
         ]);
     }
 

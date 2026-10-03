@@ -290,18 +290,60 @@ class OrderCreateRequestValidationService
         );
 
         foreach ($selectedAddonOnlyProducts as $addon) {
-            $hasSelectedParent = collect($parentIdsByAddon->get($addon->getId(), []))
-                ->contains(fn ($parentId) => $selectedProductIds->contains($parentId));
+            $parentIds = collect($parentIdsByAddon->get($addon->getId(), []))->map(fn ($parentId) => (int) $parentId);
+            $productIndex = $productLines->search(fn ($line) => (int) $line['product_id'] === $addon->getId());
+            $productIndex = is_int($productIndex) ? $productIndex : 0;
+
+            $hasSelectedParent = $parentIds->contains(fn ($parentId) => $selectedProductIds->contains($parentId));
 
             if (! $hasSelectedParent) {
-                $productIndex = $productLines->search(fn ($line) => (int) $line['product_id'] === $addon->getId());
                 throw ValidationException::withMessages([
-                    'products.'.(is_int($productIndex) ? $productIndex : 0) => __(':product is an add-on and can only be purchased with the product it belongs to', [
+                    'products.'.$productIndex => __(':product is an add-on and can only be purchased with the product it belongs to', [
                         'product' => $addon->getTitle(),
                     ]),
                 ]);
             }
+
+            $this->validateAddonQuantityPerParent($addon, $parentIds, $productLines, $productIndex);
         }
+    }
+
+    /**
+     * @throws ValidationException
+     */
+    private function validateAddonQuantityPerParent(
+        ProductDomainObject $addon,
+        Collection $parentIds,
+        Collection $productLines,
+        int $productIndex,
+    ): void {
+        $maxPerParent = $addon->getAddonMaxPerParent();
+        if ($maxPerParent === null) {
+            return;
+        }
+
+        $sumQuantities = fn (Collection $lines): int => (int) $lines
+            ->sum(fn ($line) => collect($line['quantities'])->sum('quantity'));
+
+        $productLines
+            ->groupBy(fn ($line) => (string) ($line['event_occurrence_id'] ?? ''))
+            ->each(function (Collection $occurrenceLines) use ($addon, $parentIds, $maxPerParent, $productIndex, $sumQuantities) {
+                $addonQuantity = $sumQuantities($occurrenceLines->filter(
+                    fn ($line) => (int) $line['product_id'] === $addon->getId(),
+                ));
+                $maxQuantity = $maxPerParent * $sumQuantities($occurrenceLines->filter(
+                    fn ($line) => $parentIds->contains((int) $line['product_id']),
+                ));
+
+                if ($addonQuantity > $maxQuantity) {
+                    throw ValidationException::withMessages([
+                        'products.'.$productIndex => __('You can add at most :max of :product for the selected tickets', [
+                            'max' => $maxQuantity,
+                            'product' => $addon->getTitle(),
+                        ]),
+                    ]);
+                }
+            });
     }
 
     /**

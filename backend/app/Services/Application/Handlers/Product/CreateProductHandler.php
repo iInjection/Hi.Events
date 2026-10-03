@@ -64,6 +64,7 @@ class CreateProductHandler
                 ->setHighlightMessage($productsData->highlight_message)
                 ->setWaitlistEnabled($productsData->waitlist_enabled)
                 ->setIsAddonOnly($productsData->is_addon_only ?? false)
+                ->setAddonMaxPerParent($productsData->is_addon_only ? $productsData->addon_max_per_parent : null)
                 ->setProductPrices($productPrices)
                 ->setEventId($productsData->event_id)
                 ->setProductType($productsData->product_type->name)

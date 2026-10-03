@@ -87,7 +87,7 @@ const FIELD_TO_LEDGER_ROW: Array<[RegExp, LedgerRowId]> = [
     [/^waitlist_enabled$/, 'waitlist'],
     [/^tax_and_fee_ids/, 'taxes'],
     [/^(min_per_order|max_per_order)$/, 'order-limits'],
-    [/^(addon_product_ids|is_addon_only)$/, 'addons'],
+    [/^(addon_product_ids|is_addon_only|addon_max_per_parent)$/, 'addons'],
     [/^(is_highlighted|highlight_message)$/, 'highlight'],
     [/^(is_hidden|is_hidden_without_promo_code)$/, 'access'],
 ];
@@ -537,11 +537,36 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                             form.setFieldValue('is_addon_only', changeEvent.currentTarget.checked);
                             if (changeEvent.currentTarget.checked) {
                                 form.setFieldValue('addon_product_ids', []);
+                            } else {
+                                form.setFieldValue('addon_max_per_parent', null);
                             }
                         }}
                         label={t`Only available as an add-on`}
                         description={t`This product won't appear on the event page on its own — buyers only see it as an add-on to the products it's attached to.`}
                     />
+                    {form.values.is_addon_only && (
+                        <div style={{marginTop: 15}}>
+                            <Switch
+                                checked={form.values.addon_max_per_parent != null}
+                                onChange={(changeEvent) => form.setFieldValue(
+                                    'addon_max_per_parent',
+                                    changeEvent.currentTarget.checked ? 1 : null,
+                                )}
+                                label={t`Limit to the number of selected tickets`}
+                                description={t`Buyers can only add as many of this add-on as they select tickets it is attached to, multiplied by the amount per ticket.`}
+                            />
+                            {form.values.addon_max_per_parent != null && (
+                                <NumberInput
+                                    mt={15}
+                                    {...form.getInputProps('addon_max_per_parent')}
+                                    label={t`Maximum per ticket`}
+                                    min={1}
+                                    allowDecimal={false}
+                                    allowNegative={false}
+                                />
+                            )}
+                        </div>
+                    )}
                     {!form.values.is_addon_only && (
                         <div style={{marginTop: 15}}>
                             <ProductSelector

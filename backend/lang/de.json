@@ -720,5 +720,7 @@
     "Event must be pending manual review to be approved": "Die Veranstaltung muss auf manuelle Überprüfung warten, um genehmigt werden zu können",
     "Event must be pending manual review to be confirmed as spam": "Die Veranstaltung muss auf manuelle Überprüfung warten, um als Spam bestätigt werden zu können",
     "Event approved and published": "Veranstaltung genehmigt und veröffentlicht",
-    "Event confirmed as spam": "Veranstaltung als Spam bestätigt"
+    "Event confirmed as spam": "Veranstaltung als Spam bestätigt",
+    ":product is an add-on and can only be purchased with the product it belongs to": ":product ist ein Add-on und kann nur zusammen mit dem zugehörigen Produkt gekauft werden",
+    "You can add at most :max of :product for the selected tickets": "Für die ausgewählten Tickets können Sie höchstens :max × :product hinzufügen"
 }

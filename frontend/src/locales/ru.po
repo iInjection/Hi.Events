@@ -64,7 +64,7 @@ msgstr ""
 msgid "{0} Active Webhooks"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:747
+#: src/components/routes/product-widget/SelectProducts/index.tsx:820
 msgid "{0} available"
 msgstr ""
 
@@ -154,7 +154,7 @@ msgid "{completedCount} of {totalCount} steps complete"
 msgstr ""
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:53
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:128
 msgid "{count} add-ons"
 msgstr ""
 
@@ -292,7 +292,7 @@ msgid "1 Active Webhook"
 msgstr ""
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:53
-#: src/components/forms/ProductForm/ledgerSummaries.ts:127
+#: src/components/forms/ProductForm/ledgerSummaries.ts:128
 msgid "1 add-on"
 msgstr ""
 
@@ -500,7 +500,7 @@ msgstr ""
 msgid "Accept Invitation"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:592
+#: src/components/forms/ProductForm/index.tsx:617
 msgid "Access"
 msgstr ""
 
@@ -633,7 +633,7 @@ msgstr ""
 msgid "Activity"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:830
+#: src/components/routes/product-widget/SelectProducts/index.tsx:903
 msgid "Add {0} first"
 msgstr "Сначала добавьте {0}"
 
@@ -797,20 +797,20 @@ msgid "Add your social media handles and website URL. These will be displayed on
 msgstr ""
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:375
-#: src/components/forms/ProductForm/ledgerSummaries.ts:128
+#: src/components/forms/ProductForm/ledgerSummaries.ts:129
 msgid "Add-on only"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:548
+#: src/components/forms/ProductForm/index.tsx:573
 msgid "Add-on products"
 msgstr ""
 
 #: src/components/forms/ProductForm/index.tsx:529
-#: src/components/routes/product-widget/SelectProducts/index.tsx:827
+#: src/components/routes/product-widget/SelectProducts/index.tsx:900
 msgid "Add-ons"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:81
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:99
 msgid "Added at checkout"
 msgstr "Добавляется при оформлении заказа"
 
@@ -1114,7 +1114,7 @@ msgstr ""
 
 #: src/components/common/OrdersTable/index.tsx:259
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:212
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:230
 msgid "Amount"
 msgstr "Сумма"
 
@@ -1142,7 +1142,7 @@ msgstr ""
 msgid "An optional description of this category to display on the event page."
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:582
+#: src/components/forms/ProductForm/index.tsx:607
 msgid "An optional message to display on the highlighted product, e.g. \"Selling fast 🔥\" or \"Best value\""
 msgstr ""
 
@@ -1219,11 +1219,11 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:919
+#: src/components/routes/product-widget/SelectProducts/index.tsx:684
 msgid "applied"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:918
+#: src/components/routes/product-widget/SelectProducts/index.tsx:683
 msgid "applied — {0} off your order"
 msgstr "применён — скидка {0} на ваш заказ"
 
@@ -1256,7 +1256,7 @@ msgid "Applies to every {0}, non-cancelled date in this event — including date
 msgstr ""
 
 #: src/components/common/FilterModal/index.tsx:284
-#: src/components/routes/product-widget/SelectProducts/index.tsx:950
+#: src/components/routes/product-widget/SelectProducts/index.tsx:715
 msgid "Apply"
 msgstr "Применить"
 
@@ -1832,7 +1832,7 @@ msgid "Banner content must be 200 characters or less"
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:306
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:87
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:105
 msgid "Base price"
 msgstr "Базовая цена"
 
@@ -1936,8 +1936,12 @@ msgstr ""
 msgid "Buyer pays"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:558
+#: src/components/forms/ProductForm/index.tsx:583
 msgid "Buyers can add these to their order when they select this product at checkout."
+msgstr ""
+
+#: src/components/forms/ProductForm/index.tsx:556
+msgid "Buyers can only add as many of this add-on as they select tickets it is attached to, multiplied by the amount per ticket."
 msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:235
@@ -2420,7 +2424,7 @@ msgstr ""
 msgid "Choose an Organizer"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:973
+#: src/components/routes/product-widget/SelectProducts/index.tsx:988
 msgid "Choose another date"
 msgstr ""
 
@@ -2494,8 +2498,8 @@ msgid "Click to view notes"
 msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:956
-msgid "close"
-msgstr ""
+#~ msgid "close"
+#~ msgstr ""
 
 #: src/components/common/SideDrawer/index.tsx:117
 #: src/components/forms/ProductForm/ProductDrawer.tsx:100
@@ -2504,7 +2508,6 @@ msgstr ""
 #: src/components/modals/JoinWaitlistModal/index.tsx:143
 #: src/components/modals/RefundOrderModal/index.tsx:170
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:873
-#: src/components/routes/product-widget/SelectProducts/index.tsx:957
 msgid "Close"
 msgstr ""
 
@@ -2856,7 +2859,7 @@ msgstr ""
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
 #: src/components/layouts/EventHomepage/index.tsx:210
-#: src/components/routes/product-widget/SelectProducts/index.tsx:895
+#: src/components/routes/product-widget/SelectProducts/index.tsx:976
 msgid "Continue"
 msgstr ""
 
@@ -2871,7 +2874,7 @@ msgstr ""
 msgid "Continue Setup"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1065
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1080
 msgid "Continue to Checkout"
 msgstr ""
 
@@ -3189,7 +3192,7 @@ msgstr ""
 msgid "Create Event"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:555
+#: src/components/forms/ProductForm/index.tsx:580
 msgid "Create more tickets or products to offer them as add-ons"
 msgstr ""
 
@@ -3208,7 +3211,7 @@ msgstr ""
 msgid "Create Organizer"
 msgstr ""
 
-#: src/components/modals/CreateProductModal/index.tsx:91
+#: src/components/modals/CreateProductModal/index.tsx:92
 msgid "Create Product"
 msgstr ""
 
@@ -3231,7 +3234,7 @@ msgstr "Создать расписание"
 msgid "Create Tax or Fee"
 msgstr ""
 
-#: src/components/modals/CreateProductModal/index.tsx:88
+#: src/components/modals/CreateProductModal/index.tsx:89
 msgid "Create Ticket or Product"
 msgstr ""
 
@@ -3780,7 +3783,7 @@ msgstr ""
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:103
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:412
 #: src/components/routes/product-widget/CollectInformation/index.tsx:435
-#: src/components/routes/product-widget/SelectProducts/index.tsx:421
+#: src/components/routes/product-widget/SelectProducts/index.tsx:430
 msgid "Details"
 msgstr "Подробнее"
 
@@ -3851,7 +3854,7 @@ msgstr ""
 msgid "Dismiss setup checklist"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1082
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1097
 msgid "Dismiss this message"
 msgstr ""
 
@@ -3977,8 +3980,8 @@ msgstr ""
 msgid "Duplicate Options"
 msgstr ""
 
-#: src/components/modals/DuplicateProductModal/index.tsx:128
-#: src/components/modals/DuplicateProductModal/index.tsx:132
+#: src/components/modals/DuplicateProductModal/index.tsx:130
+#: src/components/modals/DuplicateProductModal/index.tsx:134
 msgid "Duplicate Product"
 msgstr ""
 
@@ -4135,8 +4138,8 @@ msgstr "Редактировать данные заказа"
 msgid "Edit Organizer"
 msgstr ""
 
-#: src/components/modals/EditProductModal/index.tsx:113
-#: src/components/modals/EditProductModal/index.tsx:117
+#: src/components/modals/EditProductModal/index.tsx:115
+#: src/components/modals/EditProductModal/index.tsx:119
 msgid "Edit Product"
 msgstr ""
 
@@ -5232,7 +5235,7 @@ msgstr ""
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/ProductForm/index.tsx:486
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:107
 msgid "Fees"
 msgstr "Сборы"
 
@@ -5444,8 +5447,8 @@ msgstr ""
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:133
 #: src/components/forms/ProductForm/index.tsx:289
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:175
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:246
 msgid "Free"
 msgstr "Бесплатно"
 
@@ -5466,7 +5469,7 @@ msgstr "Пятница"
 msgid "From"
 msgstr "С"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:786
+#: src/components/routes/product-widget/SelectProducts/index.tsx:859
 msgid "From {0}"
 msgstr "От {0}"
 
@@ -5661,7 +5664,7 @@ msgstr ""
 msgid "Hard delete"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:906
+#: src/components/routes/product-widget/SelectProducts/index.tsx:703
 msgid "Have a promo code?"
 msgstr ""
 
@@ -5728,7 +5731,7 @@ msgstr ""
 msgid "Hidden from attendees - only visible to organizers"
 msgstr ""
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:151
+#: src/components/forms/ProductForm/ledgerSummaries.ts:153
 msgid "Hidden from everyone"
 msgstr ""
 
@@ -5746,7 +5749,7 @@ msgid "Hidden questions are only visible to the event organizer and not to the c
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:550
-#: src/components/routes/product-widget/SelectProducts/index.tsx:668
+#: src/components/routes/product-widget/SelectProducts/index.tsx:741
 msgid "Hide"
 msgstr ""
 
@@ -5774,7 +5777,7 @@ msgstr ""
 msgid "Hide product before sale start date"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:604
+#: src/components/forms/ProductForm/index.tsx:629
 msgid "Hide product unless user has applicable promo code"
 msgstr ""
 
@@ -5794,7 +5797,7 @@ msgstr ""
 msgid "Hide this category?"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:609
+#: src/components/forms/ProductForm/index.tsx:634
 msgid "Hide this product from customers"
 msgstr ""
 
@@ -5814,24 +5817,24 @@ msgstr ""
 msgid "Hiding a product will prevent users from seeing it on the event page."
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:567
+#: src/components/forms/ProductForm/index.tsx:592
 msgid "Highlight"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:581
+#: src/components/forms/ProductForm/index.tsx:606
 msgid "Highlight Message"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:574
+#: src/components/forms/ProductForm/index.tsx:599
 msgid "Highlight this product"
 msgstr ""
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:405
-#: src/components/forms/ProductForm/ledgerSummaries.ts:144
+#: src/components/forms/ProductForm/ledgerSummaries.ts:146
 msgid "Highlighted"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:575
+#: src/components/forms/ProductForm/index.tsx:600
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr ""
 
@@ -5929,7 +5932,7 @@ msgstr ""
 msgid "I confirm this is a transactional message related to this event"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1037
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1052
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
 msgstr ""
 
@@ -6472,6 +6475,10 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
+#: src/components/forms/ProductForm/index.tsx:555
+msgid "Limit to the number of selected tickets"
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:56
 msgid "Limited by capacity"
 msgstr ""
@@ -6760,12 +6767,20 @@ msgstr ""
 msgid "Max Recipients / Message"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:86
 msgid "Maximum {cap} per order"
 msgstr "Максимум {cap} на заказ"
 
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:85
+msgid "Maximum {maxQuantity} for the selected tickets"
+msgstr ""
+
 #: src/components/forms/ProductForm/index.tsx:521
 msgid "Maximum Per Order"
+msgstr ""
+
+#: src/components/forms/ProductForm/index.tsx:562
+msgid "Maximum per ticket"
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:70
@@ -7486,7 +7501,7 @@ msgstr ""
 
 #: src/components/common/PromoCodeTable/index.tsx:82
 #: src/components/forms/ProductForm/ledgerSummaries.ts:92
-#: src/components/forms/ProductForm/ledgerSummaries.ts:132
+#: src/components/forms/ProductForm/ledgerSummaries.ts:134
 #: src/components/routes/product-widget/CollectInformation/index.tsx:541
 msgid "None"
 msgstr ""
@@ -7610,7 +7625,7 @@ msgid "of every month"
 msgstr "каждого месяца"
 
 #: src/components/forms/ProductForm/ledgerSummaries.ts:77
-#: src/components/forms/ProductForm/ledgerSummaries.ts:140
+#: src/components/forms/ProductForm/ledgerSummaries.ts:142
 msgid "Off"
 msgstr ""
 
@@ -7781,7 +7796,7 @@ msgstr ""
 msgid "Online Event Details"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:86
 msgid "Only {cap} available"
 msgstr "Доступно только {cap}"
 
@@ -7801,7 +7816,7 @@ msgstr ""
 msgid "Only account administrators can delete or archive organizers. Contact your account admin for assistance."
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:542
+#: src/components/forms/ProductForm/index.tsx:544
 msgid "Only available as an add-on"
 msgstr ""
 
@@ -8365,7 +8380,7 @@ msgstr ""
 msgid "Pay"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:211
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:229
 msgid "Pay what you want"
 msgstr "Заплатите, сколько хотите"
 
@@ -8647,7 +8662,7 @@ msgstr ""
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1028
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1043
 msgid "Please continue in the new tab"
 msgstr ""
 
@@ -8696,7 +8711,7 @@ msgstr ""
 msgid "Please return to the event page to start over."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:589
+#: src/components/routes/product-widget/SelectProducts/index.tsx:612
 msgid "Please select a date and time"
 msgstr ""
 
@@ -8708,7 +8723,7 @@ msgstr ""
 msgid "Please select an image."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:614
+#: src/components/routes/product-widget/SelectProducts/index.tsx:637
 msgid "Please select at least one product"
 msgstr ""
 
@@ -8975,12 +8990,13 @@ msgstr ""
 msgid "Progress"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:505
+#: src/components/routes/product-widget/SelectProducts/index.tsx:528
 msgid "Promo {promo_code} code applied"
 msgstr ""
 
 #: src/components/common/OrderDetails/index.tsx:106
 #: src/components/modals/ManageOrderModal/index.tsx:155
+#: src/components/routes/product-widget/SelectProducts/index.tsx:703
 msgid "Promo code"
 msgstr ""
 
@@ -8988,11 +9004,11 @@ msgstr ""
 msgid "Promo Code"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:602
+#: src/components/forms/ProductForm/index.tsx:627
 msgid "Promo Code page"
 msgstr ""
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:154
+#: src/components/forms/ProductForm/ledgerSummaries.ts:156
 msgid "Promo code required"
 msgstr ""
 
@@ -9045,7 +9061,7 @@ msgstr "Заполните хотя бы одно поле адреса (пло�
 msgid "Provide the following before Stripe's next review to keep payouts flowing."
 msgstr ""
 
-#: src/components/forms/ProductForm/ledgerSummaries.ts:157
+#: src/components/forms/ProductForm/ledgerSummaries.ts:159
 msgid "Public"
 msgstr ""
 
@@ -9385,7 +9401,7 @@ msgstr ""
 msgid "Remaining Uses"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:925
+#: src/components/routes/product-widget/SelectProducts/index.tsx:690
 msgid "remove"
 msgstr ""
 
@@ -9393,7 +9409,7 @@ msgstr ""
 #: src/components/common/LocationPicker/index.tsx:210
 #: src/components/common/WaitlistTable/index.tsx:79
 #: src/components/common/WaitlistTable/index.tsx:114
-#: src/components/routes/product-widget/SelectProducts/index.tsx:926
+#: src/components/routes/product-widget/SelectProducts/index.tsx:691
 msgid "Remove"
 msgstr ""
 
@@ -10146,7 +10162,7 @@ msgstr ""
 msgid "Select products"
 msgstr "Выберите товары"
 
-#: src/components/forms/ProductForm/index.tsx:549
+#: src/components/forms/ProductForm/index.tsx:574
 msgid "Select products..."
 msgstr ""
 
@@ -10223,7 +10239,7 @@ msgstr ""
 msgid "Selling a physical product? Cap its quantity on the <0>products page</0> instead."
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:583
+#: src/components/forms/ProductForm/index.tsx:608
 msgid "Selling fast 🔥"
 msgstr ""
 
@@ -10526,7 +10542,7 @@ msgstr "Показать флажок подписки на маркетинг"
 msgid "Show marketing opt-in checkbox by default"
 msgstr "Показывать флажок подписки на маркетинг по умолчанию"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:668
+#: src/components/routes/product-widget/SelectProducts/index.tsx:741
 msgid "Show more"
 msgstr ""
 
@@ -10724,7 +10740,7 @@ msgstr ""
 msgid "Something went wrong. Please try again."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:623
+#: src/components/routes/product-widget/SelectProducts/index.tsx:646
 msgid "Sorry, this promo code is not recognized"
 msgstr ""
 
@@ -10984,7 +11000,7 @@ msgstr ""
 msgid "Successfully created attendee"
 msgstr ""
 
-#: src/components/modals/CreateProductModal/index.tsx:61
+#: src/components/modals/CreateProductModal/index.tsx:62
 msgid "Successfully Created Product"
 msgstr ""
 
@@ -10997,7 +11013,7 @@ msgstr ""
 msgid "Successfully Created Question"
 msgstr ""
 
-#: src/components/modals/DuplicateProductModal/index.tsx:112
+#: src/components/modals/DuplicateProductModal/index.tsx:114
 msgid "Successfully Duplicated Product"
 msgstr ""
 
@@ -11082,7 +11098,7 @@ msgstr ""
 msgid "Successfully Updated Platform Fee Settings"
 msgstr ""
 
-#: src/components/modals/EditProductModal/index.tsx:102
+#: src/components/modals/EditProductModal/index.tsx:104
 msgid "Successfully updated product"
 msgstr ""
 
@@ -11200,7 +11216,7 @@ msgstr ""
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:52
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:59
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:92
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:110
 msgid "Tax"
 msgstr "Налог"
 
@@ -11322,8 +11338,8 @@ msgstr ""
 msgid "Thanks,"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:297
-#: src/components/routes/product-widget/SelectProducts/index.tsx:543
+#: src/components/routes/product-widget/SelectProducts/index.tsx:295
+#: src/components/routes/product-widget/SelectProducts/index.tsx:566
 msgid "That promo code is invalid"
 msgstr ""
 
@@ -11398,7 +11414,7 @@ msgstr "Ссылка, к которой вы пытаетесь получить
 msgid "The link you clicked is invalid."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:805
+#: src/components/routes/product-widget/SelectProducts/index.tsx:878
 msgid "The maximum number of products for {0}is {1}"
 msgstr ""
 
@@ -11494,19 +11510,19 @@ msgstr ""
 msgid "Theme & Colors"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:970
+#: src/components/routes/product-widget/SelectProducts/index.tsx:985
 msgid "There are no products available for this date. Please choose another date."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:644
+#: src/components/routes/product-widget/SelectProducts/index.tsx:667
 msgid "There are no products available for this event"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:677
+#: src/components/routes/product-widget/SelectProducts/index.tsx:750
 msgid "There are no products available in this category"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:641
+#: src/components/routes/product-widget/SelectProducts/index.tsx:664
 msgid "There are no upcoming dates for this event"
 msgstr ""
 
@@ -11636,7 +11652,7 @@ msgstr ""
 msgid "This date is marked sold out."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:597
+#: src/components/routes/product-widget/SelectProducts/index.tsx:620
 msgid "This date is no longer available. Please select another date."
 msgstr ""
 
@@ -11680,7 +11696,7 @@ msgstr "Это событие ожидает ручной проверки, и �
 msgid "This event is pending manual review. Its status cannot be changed until the review is complete."
 msgstr "Это событие ожидает ручной проверки. Его статус нельзя изменить до завершения проверки."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:640
+#: src/components/routes/product-widget/SelectProducts/index.tsx:663
 msgid "This event is sold out"
 msgstr "Все билеты на это мероприятие распроданы"
 
@@ -11781,7 +11797,7 @@ msgstr ""
 msgid "This organizer profile is not published yet"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:607
+#: src/components/forms/ProductForm/index.tsx:632
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr ""
 
@@ -11801,7 +11817,7 @@ msgstr ""
 msgid "This product is sold out"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:543
+#: src/components/forms/ProductForm/index.tsx:545
 msgid "This product won't appear on the event page on its own — buyers only see it as an add-on to the products it's attached to."
 msgstr ""
 
@@ -11947,7 +11963,7 @@ msgstr ""
 msgid "Ticket resent successfully"
 msgstr "Билет успешно отправлен повторно"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:636
+#: src/components/routes/product-widget/SelectProducts/index.tsx:659
 msgid "Ticket sales have ended for this event"
 msgstr ""
 
@@ -12095,7 +12111,7 @@ msgstr ""
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:94
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:112
 msgid "Total"
 msgstr "Итого"
 
@@ -12265,11 +12281,11 @@ msgstr ""
 msgid "Unable to check out attendee"
 msgstr ""
 
-#: src/components/modals/CreateProductModal/index.tsx:70
+#: src/components/modals/CreateProductModal/index.tsx:71
 msgid "Unable to create product. Please check the your details"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:283
+#: src/components/routes/product-widget/SelectProducts/index.tsx:281
 msgid "Unable to create product. Please check your details"
 msgstr ""
 
@@ -12277,7 +12293,7 @@ msgstr ""
 msgid "Unable to create question. Please check the your details"
 msgstr ""
 
-#: src/components/modals/DuplicateProductModal/index.tsx:120
+#: src/components/modals/DuplicateProductModal/index.tsx:122
 msgid "Unable to duplicate product. Please check the your details"
 msgstr ""
 
@@ -12293,7 +12309,7 @@ msgstr "Не удалось присоединиться к списку ожи�
 msgid "Unable to load attendee details."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:335
+#: src/components/routes/product-widget/SelectProducts/index.tsx:332
 msgid "Unable to load products for this date. Please try again."
 msgstr ""
 
@@ -12353,7 +12369,7 @@ msgstr ""
 msgid "Unlimited"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:740
+#: src/components/routes/product-widget/SelectProducts/index.tsx:813
 msgid "Unlimited available"
 msgstr ""
 
@@ -12407,6 +12423,11 @@ msgstr ""
 
 #: src/components/forms/ProductForm/ledgerSummaries.ts:118
 msgid "Up to {max} per order"
+msgstr ""
+
+#: src/components/forms/ProductForm/ledgerSummaries.ts:130
+#: src/components/routes/product-widget/SelectProducts/index.tsx:927
+msgid "Up to {maxPerParent} per ticket"
 msgstr ""
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:457
@@ -13438,7 +13459,7 @@ msgstr ""
 msgid "You can configure additional service fees and taxes in your account settings."
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:599
+#: src/components/forms/ProductForm/index.tsx:624
 msgid "You can create a promo code which targets this product on the"
 msgstr ""
 

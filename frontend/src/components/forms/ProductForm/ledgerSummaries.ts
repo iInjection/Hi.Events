@@ -123,9 +123,11 @@ export const orderLimitsSummary = (values: Product): RowSummary => {
 
 export const addonsSummary = (values: Product): RowSummary => {
     const count = values.addon_product_ids?.length || 0;
+    const maxPerParent = values.is_addon_only ? values.addon_max_per_parent : null;
     const parts = [
         count === 1 ? t`1 add-on` : count > 1 ? t`${count} add-ons` : undefined,
         values.is_addon_only ? t`Add-on only` : undefined,
+        maxPerParent ? t`Up to ${maxPerParent} per ticket` : undefined,
     ].filter(Boolean) as string[];
 
     if (parts.length === 0) {

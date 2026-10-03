@@ -57,6 +57,7 @@ class ProductResourcePublic extends JsonResource
             'highlight_message' => $this->getHighlightMessage(),
             'waitlist_enabled' => $this->getWaitlistEnabled(),
             'is_addon_only' => $this->getIsAddonOnly(),
+            'addon_max_per_parent' => $this->getAddonMaxPerParent(),
             'addon_product_ids' => $this->when(
                 $this->getAddons() !== null,
                 fn () => $this->getAddonProductIds(),

@@ -406,6 +406,18 @@ const SelectProducts = (props: SelectProductsProps) => {
             .map(Number)
             .filter(addonId => addonId !== Number(product.id) && productsById.has(addonId));
 
+    const getAddonQuantityLimit = (addon: Product): number | undefined => {
+        if (!addon.is_addon_only || !addon.addon_max_per_parent) {
+            return undefined;
+        }
+
+        const selectedParentQuantity = topLevelProducts
+            .filter(parent => getResolvableAddonIds(parent).includes(Number(addon.id)))
+            .reduce((sum, parent) => sum + getProductQuantity(Number(parent.id)), 0);
+
+        return selectedParentQuantity * addon.addon_max_per_parent;
+    };
+
     const renderProductDetails = (productId: number, description: string, className: string) => {
         const isExpanded = expandedDetails[productId] ?? false;
 
@@ -449,6 +461,20 @@ const SelectProducts = (props: SelectProductsProps) => {
                     form.setFieldValue(
                         `products.${formIndex}.quantities`,
                         formProducts[formIndex].quantities.map(quantity => ({...quantity, quantity: 0})),
+                    );
+                    return;
+                }
+
+                const quantityLimit = getAddonQuantityLimit(addon);
+                if (quantityLimit !== undefined && getProductQuantity(addonId) > quantityLimit) {
+                    let remaining = quantityLimit;
+                    form.setFieldValue(
+                        `products.${formIndex}.quantities`,
+                        formProducts[formIndex].quantities.map(quantity => {
+                            const allowedQuantity = Math.min(Number(quantity.quantity), remaining);
+                            remaining -= allowedQuantity;
+                            return {...quantity, quantity: allowedQuantity};
+                        }),
                     );
                 }
             });
@@ -884,6 +910,7 @@ const SelectProducts = (props: SelectProductsProps) => {
                                                                 return null;
                                                             }
                                                             const addonFormIndex = getProductFormIndex(addonId);
+                                                            const maxPerParent = addon.is_addon_only ? addon.addon_max_per_parent : null;
 
                                                             return (
                                                                 <div key={addonId}
@@ -895,6 +922,11 @@ const SelectProducts = (props: SelectProductsProps) => {
                                                                     )}
                                                                     <div className={'hi-product-addon-title'}>
                                                                         {addon.title}
+                                                                        {!!maxPerParent && (
+                                                                            <span className={'hi-product-addon-limit-note'}>
+                                                                                {t`Up to ${maxPerParent} per ticket`}
+                                                                            </span>
+                                                                        )}
                                                                     </div>
                                                                     <TieredPricing
                                                                         productIndex={addonFormIndex}
@@ -902,6 +934,7 @@ const SelectProducts = (props: SelectProductsProps) => {
                                                                         product={addon}
                                                                         form={form}
                                                                         eventOccurrenceId={selectedOccurrenceId}
+                                                                        maxQuantity={getAddonQuantityLimit(addon)}
                                                                     />
                                                                     {form.errors[`products.${addonFormIndex}`] && (
                                                                         <div className={'hi-product-quantity-error'}>

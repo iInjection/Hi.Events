@@ -47,6 +47,7 @@ class UpsertProductRequest extends BaseRequest
             'addon_product_ids' => 'array',
             'addon_product_ids.*' => 'integer',
             'is_addon_only' => 'boolean',
+            'addon_max_per_parent' => [...RulesHelper::INTEGER, 'nullable', 'min:1'],
             'product_category_id' => ['required', 'integer'],
             'is_highlighted' => 'boolean',
             'highlight_message' => 'string|nullable|max:255',

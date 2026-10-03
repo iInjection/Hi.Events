@@ -138,6 +138,7 @@ class EditProductHandler
                 'highlight_message' => $productsData->highlight_message,
                 'waitlist_enabled' => $productsData->waitlist_enabled,
                 'is_addon_only' => $productsData->is_addon_only ?? false,
+                'addon_max_per_parent' => $productsData->is_addon_only ? $productsData->addon_max_per_parent : null,
             ],
             where: $where
         );

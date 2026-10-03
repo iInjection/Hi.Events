@@ -860,6 +860,118 @@ class OrderCreateRequestValidationServiceTest extends TestCase
         $this->assertTrue(true);
     }
 
+    public function test_rejects_addon_quantity_above_limit_per_parent(): void
+    {
+        $this->setupEventLookup(1);
+
+        $parent = $this->createFullProductMock(productId: 9, priceId: 90);
+        $addon = $this->createFullProductMock(productId: 10, priceId: 100, isAddonOnly: true, productType: 'GENERAL', addonMaxPerParent: 1);
+
+        $this->productRepository
+            ->shouldReceive('findWhereIn')
+            ->andReturn(collect([$parent, $addon]));
+
+        $this->productRepository
+            ->shouldReceive('findParentProductIds')
+            ->with([10])
+            ->andReturn(collect([10 => [9]]));
+
+        $this->expectException(ValidationException::class);
+        $this->expectExceptionMessage('at most 2 of Product 10');
+
+        $this->service->validateRequestData(1, [
+            'products' => [
+                [
+                    'product_id' => 9,
+                    'event_occurrence_id' => 10,
+                    'quantities' => [['price_id' => 90, 'quantity' => 2]],
+                ],
+                [
+                    'product_id' => 10,
+                    'event_occurrence_id' => 10,
+                    'quantities' => [['price_id' => 100, 'quantity' => 3]],
+                ],
+            ],
+        ]);
+    }
+
+    public function test_allows_addon_quantity_up_to_limit_across_all_parents(): void
+    {
+        $occurrence = $this->createOccurrence();
+        $this->setupOccurrenceLookup(1, 10, $occurrence);
+        $this->setupEventLookup(1);
+        $this->setupAvailabilityFor([[8, 80], [9, 90], [10, 100]]);
+
+        $adultTicket = $this->createFullProductMock(productId: 8, priceId: 80);
+        $childTicket = $this->createFullProductMock(productId: 9, priceId: 90);
+        $addon = $this->createFullProductMock(productId: 10, priceId: 100, isAddonOnly: true, productType: 'GENERAL', addonMaxPerParent: 2);
+
+        $this->productRepository
+            ->shouldReceive('findWhereIn')
+            ->andReturn(collect([$adultTicket, $childTicket, $addon]));
+
+        $this->productRepository
+            ->shouldReceive('findParentProductIds')
+            ->with([10])
+            ->andReturn(collect([10 => [8, 9]]));
+
+        $this->service->validateRequestData(1, [
+            'products' => [
+                [
+                    'product_id' => 8,
+                    'event_occurrence_id' => 10,
+                    'quantities' => [['price_id' => 80, 'quantity' => 2]],
+                ],
+                [
+                    'product_id' => 9,
+                    'event_occurrence_id' => 10,
+                    'quantities' => [['price_id' => 90, 'quantity' => 1]],
+                ],
+                [
+                    'product_id' => 10,
+                    'event_occurrence_id' => 10,
+                    'quantities' => [['price_id' => 100, 'quantity' => 6]],
+                ],
+            ],
+        ]);
+        $this->assertTrue(true);
+    }
+
+    public function test_addon_limit_counts_parents_of_the_same_occurrence_only(): void
+    {
+        $this->setupEventLookup(1);
+
+        $parent = $this->createFullProductMock(productId: 9, priceId: 90);
+        $addon = $this->createFullProductMock(productId: 10, priceId: 100, isAddonOnly: true, productType: 'GENERAL', addonMaxPerParent: 1);
+
+        $this->productRepository
+            ->shouldReceive('findWhereIn')
+            ->andReturn(collect([$parent, $addon]));
+
+        $this->productRepository
+            ->shouldReceive('findParentProductIds')
+            ->with([10])
+            ->andReturn(collect([10 => [9]]));
+
+        $this->expectException(ValidationException::class);
+        $this->expectExceptionMessage('at most 0 of Product 10');
+
+        $this->service->validateRequestData(1, [
+            'products' => [
+                [
+                    'product_id' => 9,
+                    'event_occurrence_id' => 10,
+                    'quantities' => [['price_id' => 90, 'quantity' => 2]],
+                ],
+                [
+                    'product_id' => 10,
+                    'event_occurrence_id' => 11,
+                    'quantities' => [['price_id' => 100, 'quantity' => 1]],
+                ],
+            ],
+        ]);
+    }
+
     public function test_rejects_product_before_its_sale_start_date(): void
     {
         $this->expectException(ValidationException::class);
@@ -1130,6 +1242,7 @@ class OrderCreateRequestValidationServiceTest extends TestCase
         int $priceId,
         bool $isAddonOnly = false,
         string $productType = 'TICKET',
+        ?int $addonMaxPerParent = null,
     ): ProductDomainObject|MockInterface {
         $price = Mockery::mock(ProductPriceDomainObject::class);
         $price->shouldReceive('getId')->andReturn($priceId);
@@ -1157,6 +1270,7 @@ class OrderCreateRequestValidationServiceTest extends TestCase
         $product->shouldReceive('isBeforeSaleStartDate')->andReturn(false);
         $product->shouldReceive('isAfterSaleEndDate')->andReturn(false);
         $product->shouldReceive('getIsAddonOnly')->andReturn($isAddonOnly);
+        $product->shouldReceive('getAddonMaxPerParent')->andReturn($addonMaxPerParent);
 
         return $product;
     }

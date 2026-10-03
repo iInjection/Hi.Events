@@ -849,6 +849,7 @@ export interface Product {
     waitlist_entry_count?: number;
     addon_product_ids?: IdParam[];
     is_addon_only?: boolean;
+    addon_max_per_parent?: number | null;
     addons?: Array<{ id: number; title: string }>;
 }
 

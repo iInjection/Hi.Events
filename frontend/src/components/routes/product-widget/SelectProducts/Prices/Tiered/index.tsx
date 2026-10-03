@@ -20,6 +20,7 @@ interface TieredPricingProps {
     eventOccurrenceId?: IdParam;
     displayMode?: 'header' | 'list';
     showStepper?: boolean;
+    maxQuantity?: number;
 }
 
 const getFeesAndTaxTotal = (price: ProductPrice): number => (price.tax_total || 0) + (price.fee_total || 0);
@@ -48,6 +49,7 @@ export const TieredPricing = ({
                                   eventOccurrenceId,
                                   displayMode = 'list',
                                   showStepper = true,
+                                  maxQuantity,
                               }: TieredPricingProps) => {
     const [limitMessages, setLimitMessages] = useState<{ [priceIndex: number]: string }>({});
     const limitTimeoutsRef = useRef<{ [priceIndex: number]: ReturnType<typeof setTimeout> }>({});
@@ -59,13 +61,29 @@ export const TieredPricing = ({
     const priceDisplayMode = event?.settings?.price_display_mode;
     const isInclusive = priceDisplayMode === 'INCLUSIVE';
 
-    const getQuantityCap = (price: ProductPrice): number =>
+    const getStockAndOrderCap = (price: ProductPrice): number =>
         Math.min(price.quantity_remaining ?? 50, product.max_per_order ?? 50);
 
+    const getQuantityOfOtherPrices = (index: number): number =>
+        (form.values.products?.[productIndex]?.quantities ?? [])
+            .reduce((sum: number, {quantity}: { quantity: number }, quantityIndex: number) =>
+                quantityIndex === index ? sum : sum + Number(quantity), 0);
+
+    const getQuantityCap = (price: ProductPrice, index: number): number => {
+        const stockAndOrderCap = getStockAndOrderCap(price);
+        if (maxQuantity === undefined) {
+            return stockAndOrderCap;
+        }
+        return Math.max(0, Math.min(stockAndOrderCap, maxQuantity - getQuantityOfOtherPrices(index)));
+    };
+
     const flashLimitMessage = (price: ProductPrice, index: number) => {
-        const cap = getQuantityCap(price);
+        const cap = getQuantityCap(price, index);
         const limitedByStock = (price.quantity_remaining ?? Infinity) < (product.max_per_order ?? 50);
-        const message = limitedByStock ? t`Only ${cap} available` : t`Maximum ${cap} per order`;
+        const limitedBySelectedTickets = maxQuantity !== undefined && cap < getStockAndOrderCap(price);
+        const message = limitedBySelectedTickets
+            ? t`Maximum ${maxQuantity} for the selected tickets`
+            : limitedByStock ? t`Only ${cap} available` : t`Maximum ${cap} per order`;
 
         setLimitMessages(previous => ({...previous, [index]: message}));
         clearTimeout(limitTimeoutsRef.current[index]);
@@ -101,7 +119,7 @@ export const TieredPricing = ({
             {(product.is_available && price.is_available) && showStepper && (
                 <NumberSelector
                     min={product.min_per_order ?? 0}
-                    max={getQuantityCap(price)}
+                    max={getQuantityCap(price, index)}
                     fieldName={`products.${productIndex}.quantities.${index}.quantity`}
                     formInstance={form}
                     selectorSize={displayMode === 'list' ? 'compact' : 'default'}
