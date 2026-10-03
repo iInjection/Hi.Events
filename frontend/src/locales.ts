@@ -89,6 +89,10 @@ export const getClientLocale = () => {
     return "en";
 };
 
+export const setLocaleCookie = (locale: string) => {
+    document.cookie = `locale=${locale};path=/;max-age=31536000`;
+};
+
 const dayjsLocaleLoaders: Partial<Record<SupportedLocales, () => Promise<unknown>>> = {
     de: () => import("dayjs/locale/de"),
     fr: () => import("dayjs/locale/fr"),

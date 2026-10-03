@@ -1,32 +1,24 @@
 import {useGetMe} from "./queries/useGetMe.ts";
 import {useEffect} from "react";
-import {dynamicActivateLocale, getClientLocale} from "./locales.ts";
+import {getClientLocale, getSupportedLocale, setLocaleCookie} from "./locales.ts";
 
 export const StartupChecks = () => {
     const meQuery = useGetMe();
-
-    const setLocaleForLoggedInUser = () => {
-        const cookieLocale = getClientLocale();
-
-        if (cookieLocale) {
-            // If the user has a locale set in their cookies, we don't want to override it
-            return;
-        }
-
-        if (meQuery.data?.locale) {
-            dynamicActivateLocale(meQuery.data.locale).then(() => {
-                console.log('Activated locale from user settings ' + meQuery.data.locale);
-            });
-        }
-    };
+    const userLocale = meQuery.data?.locale;
 
     useEffect(() => {
-        if (!meQuery.isSuccess) {
+        if (!meQuery.isSuccess || !userLocale) {
             return;
         }
 
-        setLocaleForLoggedInUser();
-    }, [meQuery.isSuccess]);
+        const locale = getSupportedLocale(userLocale);
+        const localeChanged = getClientLocale() !== locale;
+        setLocaleCookie(locale);
+
+        if (localeChanged) {
+            window.location.reload();
+        }
+    }, [meQuery.isSuccess, userLocale]);
 
     return <></>;
 }

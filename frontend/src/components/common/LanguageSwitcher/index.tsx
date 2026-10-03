@@ -1,5 +1,5 @@
 import {Select} from "@mantine/core";
-import {dynamicActivateLocale, getClientLocale, localeToNameMap, SupportedLocales} from "../../../locales.ts";
+import {dynamicActivateLocale, getClientLocale, localeToNameMap, setLocaleCookie, SupportedLocales} from "../../../locales.ts";
 import {t} from "@lingui/macro";
 import {IconWorld} from "@tabler/icons-react";
 import {useLingui} from "@lingui/react";
@@ -73,7 +73,7 @@ export const LanguageSwitcher = () => {
                 placeholder={t`English`}
                 onChange={(value) => {
                     if (!value) return;
-                    document.cookie = `locale=${value};path=/;max-age=31536000`;
+                    setLocaleCookie(value);
                     dynamicActivateLocale(value).finally(() => {
                         window.location.href = window.location.pathname + window.location.search;
                     });

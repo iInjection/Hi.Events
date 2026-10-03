@@ -14,7 +14,7 @@ import {useCancelEmailChange} from "../../../../mutations/useCancelEmailChange.t
 import {useFormErrorResponseHandler} from "../../../../hooks/useFormErrorResponseHandler.tsx";
 import {t, Trans} from "@lingui/macro";
 import {useResendEmailConfirmation} from "../../../../mutations/useResendEmailConfirmation.ts";
-import {localeToFlagEmojiMap, localeToNameMap, SupportedLocales} from "../../../../locales.ts";
+import {localeToFlagEmojiMap, localeToNameMap, setLocaleCookie, SupportedLocales} from "../../../../locales.ts";
 import {Fieldset} from "../../../common/Fieldset";
 import {InputGroup} from "../../../common/InputGroup";
 import {getConfig} from "../../../../utilites/config.ts";
@@ -62,15 +62,20 @@ export const ManageProfile = () => {
     }, [me]);
 
     const handleProfileFormSubmit = (formValues: Partial<UserMeRequest>, form: UseFormReturnType<any>) => {
+        const localeChanged = !!formValues.locale && formValues.locale !== me?.locale;
+
         mutation.mutate({
             userData: formValues,
         }, {
             onSuccess: () => {
                 form.reset();
                 showSuccess(t`Profile updated successfully`);
-                document.cookie = `locale=${formValues.locale};path=/;max-age=31536000`;
 
-                if (form.isDirty('locale')) {
+                if (formValues.locale) {
+                    setLocaleCookie(formValues.locale);
+                }
+
+                if (localeChanged) {
                     window.location.reload();
                 }
             },
