@@ -13,6 +13,12 @@ COPY --chown=www-data:www-data . /var/www/html
 # Switch to root user to install PHP extensions
 USER root
 RUN install-php-extensions intl imagick gd
+
+ARG USER_ID=82
+ARG GROUP_ID=82
+RUN docker-php-serversideup-set-id www-data ${USER_ID}:${GROUP_ID} \
+    && docker-php-serversideup-set-file-permissions --owner ${USER_ID}:${GROUP_ID} --service nginx \
+    && chown -R ${USER_ID}:${GROUP_ID} /var/www/html
 USER www-data
 
 RUN chmod -R 755 /var/www/html/storage \

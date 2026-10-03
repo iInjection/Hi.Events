@@ -3,6 +3,9 @@ services:
         build:
             context: ./../../backend
             dockerfile: Dockerfile.dev
+            args:
+                USER_ID: ${HOST_UID:-1000}
+                GROUP_ID: ${HOST_GID:-1000}
         container_name: backend
         ports:
             - "1234:80"
@@ -128,6 +131,8 @@ services:
             retries: 3
             timeout: 5s
     minio:
+        profiles:
+            - s3
         image: 'minio/minio:latest'
         ports:
             - '${FORWARD_MINIO_PORT:-9000}:9000'
@@ -150,6 +155,8 @@ services:
             timeout: 5s
 
     createbuckets:
+        profiles:
+            - s3
         image: minio/mc
         depends_on:
             - minio
