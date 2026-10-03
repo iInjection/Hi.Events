@@ -64,8 +64,7 @@ export class CheckoutPage {
   }
 
   async applyPromoCode(code: string): Promise<void> {
-    await this.surface.getByText('Have a promo code?').click();
-    await this.surface.locator('.hi-promo-code-input').fill(code);
+    await this.surface.getByLabel('Have a promo code?').fill(code);
     await this.surface.getByTestId('promo-code-apply-button').click();
   }
 

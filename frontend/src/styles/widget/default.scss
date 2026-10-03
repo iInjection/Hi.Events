@@ -586,19 +586,14 @@
 
   .hi-promo-code-row {
     display: flex;
-    align-items: center;
-    margin-top: 18px;
+    flex-direction: column;
+    align-items: stretch;
 
-    .hi-have-a-promo-code-link {
-      font-size: 13px;
-      color: var(--hi-muted);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: color 150ms var(--hi-ease);
-
-      &:hover {
-        color: var(--hi-accent);
-      }
+    .hi-promo-code-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--hi-text);
+      margin-bottom: 6px;
     }
 
     .hi-promo-code-input-wrapper {
@@ -635,18 +630,6 @@
 
       &:hover {
         background: var(--hi-soft-accent);
-      }
-    }
-
-    .hi-close-promo-code-input-button {
-      background: transparent;
-      border: none;
-      color: var(--hi-muted);
-      flex-shrink: 0;
-
-      &:hover {
-        color: var(--hi-text);
-        background: transparent;
       }
     }
 
