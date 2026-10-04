@@ -336,7 +336,8 @@ class DuplicateEventService
                         ->setType($question->getType())
                         ->setRequired($question->getRequired())
                         ->setOptions($question->getOptions())
-                        ->setIsHidden($question->getIsHidden()),
+                        ->setIsHidden($question->getIsHidden())
+                        ->setIsBuyerEditable($question->getIsBuyerEditable()),
                     array_map(
                         static fn (ProductDomainObject $product) => $oldProductToNewProductMap[$product->getId()],
                         $question->getProducts()?->all(),
@@ -362,7 +363,8 @@ class DuplicateEventService
                         ->setType($question->getType())
                         ->setRequired($question->getRequired())
                         ->setOptions($question->getOptions())
-                        ->setIsHidden($question->getIsHidden()),
+                        ->setIsHidden($question->getIsHidden())
+                        ->setIsBuyerEditable($question->getIsBuyerEditable()),
                     [],
                 );
             }

@@ -1,5 +1,29 @@
 import {publicApi} from "./public-client.ts";
-import {IdParam} from "../types.ts";
+import {GenericDataResponse, IdParam} from "../types.ts";
+
+export type BuyerAnswerValue = string | string[] | Record<string, string> | null;
+
+export interface BuyerEditableAnswer {
+    question_id: number;
+    title: string;
+    description: string | null;
+    type: string;
+    required: boolean;
+    options: string[];
+    option_labels: string[] | null;
+    attendee_id: number | null;
+    attendee_name: string | null;
+    product_id: number | null;
+    product_title: string | null;
+    answer: BuyerAnswerValue;
+}
+
+export interface SaveBuyerAnswerData {
+    question_id: number;
+    attendee_id: number | null;
+    product_id: number | null;
+    answer: BuyerAnswerValue;
+}
 
 export interface SelfServiceUpdateResult {
     success: boolean;
@@ -65,6 +89,21 @@ export const selfServiceClient = {
     ): Promise<{ success: boolean; message: string }> => {
         const response = await publicApi.post(
             `/events/${eventId}/order/${orderShortId}/resend-confirmation`
+        );
+        return response.data;
+    },
+
+    getQuestionAnswers: async (eventId: IdParam, orderShortId: string) => {
+        const response = await publicApi.get<GenericDataResponse<BuyerEditableAnswer[]>>(
+            `/events/${eventId}/order/${orderShortId}/question-answers`
+        );
+        return response.data;
+    },
+
+    saveQuestionAnswer: async (eventId: IdParam, orderShortId: string, data: SaveBuyerAnswerData) => {
+        const response = await publicApi.put<GenericDataResponse<BuyerEditableAnswer[]>>(
+            `/events/${eventId}/order/${orderShortId}/question-answers`,
+            data
         );
         return response.data;
     },

@@ -38,6 +38,7 @@ class CreateQuestionService
             QuestionDomainObjectAbstract::REQUIRED => $question->getRequired(),
             QuestionDomainObjectAbstract::OPTIONS => $question->getOptions(),
             QuestionDomainObjectAbstract::IS_HIDDEN => $question->getIsHidden(),
+            QuestionDomainObjectAbstract::IS_BUYER_EDITABLE => $question->getIsBuyerEditable(),
             QuestionDomainObjectAbstract::DESCRIPTION => $this->purifier->purify($question->getDescription()),
         ], $productIds));
     }

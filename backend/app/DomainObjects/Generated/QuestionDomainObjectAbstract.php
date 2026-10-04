@@ -23,6 +23,7 @@ abstract class QuestionDomainObjectAbstract extends \HiEvents\DomainObjects\Abst
     final public const ORDER = 'order';
     final public const IS_HIDDEN = 'is_hidden';
     final public const DESCRIPTION = 'description';
+    final public const IS_BUYER_EDITABLE = 'is_buyer_editable';
 
     protected int $id;
     protected int $event_id;
@@ -37,6 +38,7 @@ abstract class QuestionDomainObjectAbstract extends \HiEvents\DomainObjects\Abst
     protected int $order = 1;
     protected bool $is_hidden = false;
     protected ?string $description = null;
+    protected bool $is_buyer_editable = false;
 
     public function toArray(): array
     {
@@ -54,6 +56,7 @@ abstract class QuestionDomainObjectAbstract extends \HiEvents\DomainObjects\Abst
                     'order' => $this->order ?? null,
                     'is_hidden' => $this->is_hidden ?? null,
                     'description' => $this->description ?? null,
+                    'is_buyer_editable' => $this->is_buyer_editable ?? null,
                 ];
     }
 
@@ -198,5 +201,16 @@ abstract class QuestionDomainObjectAbstract extends \HiEvents\DomainObjects\Abst
     public function getDescription(): ?string
     {
         return $this->description;
+    }
+
+    public function setIsBuyerEditable(bool $is_buyer_editable): self
+    {
+        $this->is_buyer_editable = $is_buyer_editable;
+        return $this;
+    }
+
+    public function getIsBuyerEditable(): bool
+    {
+        return $this->is_buyer_editable;
     }
 }

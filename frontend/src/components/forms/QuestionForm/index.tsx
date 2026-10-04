@@ -218,6 +218,15 @@ export const QuestionForm = ({form, productCategories}: QuestionFormProps) => {
                 description={t`Hidden questions are only visible to the event organizer and not to the customer.`}
                 label={t`Hide this question`}
             />
+
+            <Switch
+                mt={20}
+                {...form.getInputProps('is_buyer_editable', {type: 'checkbox'})}
+                checked={!!form.values.is_buyer_editable && !form.values.is_hidden}
+                disabled={!!form.values.is_hidden}
+                description={t`Buyers can answer or change this question later on their order page, for example after you added it to existing registrations.`}
+                label={t`Buyers can edit this answer on their order page`}
+            />
         </>
     )
 }

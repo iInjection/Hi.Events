@@ -18,5 +18,6 @@ class UpsertQuestionDTO extends BaseDTO
         public bool $is_hidden,
         public QuestionBelongsTo $belongs_to,
         public ?string $description = null,
+        public bool $is_buyer_editable = false,
     ) {}
 }

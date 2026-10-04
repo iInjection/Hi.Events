@@ -31,6 +31,7 @@ import {getAttendeeProductTitle} from "../../../../utilites/products.ts";
 import {showSuccess, showError} from "../../../../utilites/notifications.tsx";
 
 import {Card} from "../../../common/Card";
+import {BuyerQuestionAnswers} from "./BuyerQuestionAnswers.tsx";
 import {LoadingMask} from "../../../common/LoadingMask";
 import {HomepageInfoMessage} from "../../../common/HomepageInfoMessage";
 import {PoweredByFooter} from "../../../common/PoweredByFooter";
@@ -619,6 +620,10 @@ export const OrderSummaryAndProducts = () => {
                     onEditClick={() => setEditOrderModalOpened(true)}
                     onResendClick={handleResendOrderConfirmation}
                 />
+
+                {order.status !== 'CANCELLED' && (
+                    <BuyerQuestionAnswers eventId={eventId!} orderShortId={orderShortId!} headingClassName={classes.heading}/>
+                )}
 
                 <OnlineEventDetails event={event} occurrence={order.order_items?.[0]?.event_occurrence ?? null}/>
 

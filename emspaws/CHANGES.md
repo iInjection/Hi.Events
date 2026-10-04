@@ -16,6 +16,25 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 
 ## Changes
 
+### Buyers can edit selected answers on their order page (2026-10-04)
+- New question switch "Buyers can edit this answer on their order page" (column
+  `questions.is_buyer_editable`, default off; disabled while "Hide this question" is on, hidden
+  questions are never shown to buyers). Copied when an event is duplicated.
+- The buyer's order page (link "manage your order" in the confirmation email) shows a "Questions"
+  section with only these questions: order questions once, ticket questions per attendee,
+  product questions per product. Current answer (or "—"), edit icon, same inputs as checkout, in
+  the buyer's language (translated titles, option labels and ticket names).
+- Rules: only completed orders and orders awaiting offline payment; required questions cannot be
+  cleared; answers are validated like at checkout; a buyer can only answer slots of their own
+  order; rate limit `self-service-edit` (as upstream's self-service edits). An answer row is
+  created on first save, so this also works for optional questions skipped at checkout.
+- API: `GET`/`PUT /public/events/{event_id}/order/{order_short_id}/question-answers`.
+- Files: `Services/Domain/Question/BuyerEditableQuestionAnswerService.php`,
+  `Handlers/Question/{Get,Save}BuyerEditableAnswer*`, `Http/Actions/Questions/*BuyerEditable*`,
+  migration `2026_10_04_000002_add_is_buyer_editable_to_questions_table.php`; frontend
+  `QuestionForm`, `OrderSummaryAndProducts/BuyerQuestionAnswers.tsx`, `self-service.client.ts`.
+- Tests: `tests/Unit/Services/Domain/Question/BuyerEditableQuestionAnswerServiceTest.php`.
+
 ### Questions added later appear on existing registrations (2026-10-04, `61679c36`)
 - Saving a registration question (create or edit) syncs it to existing registrations: every
   completed order or order awaiting offline payment gets the question without an answer. Order

@@ -30,6 +30,7 @@ class CreateQuestionHandler
             ->setRequired($createQuestionDTO->required)
             ->setOptions($createQuestionDTO->options)
             ->setIsHidden($createQuestionDTO->is_hidden)
+            ->setIsBuyerEditable($createQuestionDTO->is_buyer_editable)
             ->setDescription($this->purifier->purify($createQuestionDTO->description));
 
         $createdQuestion = $this->createQuestionService->createQuestion(

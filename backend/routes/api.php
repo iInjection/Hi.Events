@@ -222,9 +222,11 @@ use HiEvents\Http\Actions\Questions\DeleteQuestionAction;
 use HiEvents\Http\Actions\Questions\EditQuestionAction;
 use HiEvents\Http\Actions\Questions\EditQuestionAnswerAction;
 use HiEvents\Http\Actions\Questions\ExportQuestionAnswersAction;
+use HiEvents\Http\Actions\Questions\GetBuyerEditableAnswersPublicAction;
 use HiEvents\Http\Actions\Questions\GetQuestionAction;
 use HiEvents\Http\Actions\Questions\GetQuestionsAction;
 use HiEvents\Http\Actions\Questions\GetQuestionsPublicAction;
+use HiEvents\Http\Actions\Questions\SaveBuyerEditableAnswerPublicAction;
 use HiEvents\Http\Actions\Questions\SortQuestionsAction;
 use HiEvents\Http\Actions\Reports\ExportOrganizerReportAction;
 use HiEvents\Http\Actions\Reports\GetOrganizerReportAction;
@@ -682,6 +684,9 @@ $router->prefix('/public')->group(
 
             $router->patch('/attendees/{attendee_short_id}', EditAttendeePublicAction::class)->middleware('throttle:self-service-edit');
             $router->post('/attendees/{attendee_short_id}/resend-ticket', ResendAttendeeTicketPublicAction::class)->middleware('throttle:self-service-email');
+
+            $router->get('/question-answers', GetBuyerEditableAnswersPublicAction::class);
+            $router->put('/question-answers', SaveBuyerEditableAnswerPublicAction::class)->middleware('throttle:self-service-edit');
         });
 
         // Sitemap

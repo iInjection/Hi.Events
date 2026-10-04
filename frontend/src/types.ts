@@ -1002,6 +1002,7 @@ export interface Question {
     product_ids?: number[];
     belongs_to: string;
     is_hidden: boolean;
+    is_buyer_editable?: boolean;
 }
 
 export interface CapacityAssignment {
@@ -1133,6 +1134,7 @@ export interface QuestionRequestData {
     description?: string;
     required: boolean;
     is_hidden: boolean;
+    is_buyer_editable?: boolean;
     type: string;
     options: string[];
     product_ids?: string[];
