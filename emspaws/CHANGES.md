@@ -16,7 +16,7 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 
 ## Changes
 
-### Language switcher works for logged-in users (2026-10-04)
+### Language switcher works for logged-in users (2026-10-04, `24e07471`)
 - Bug: logged-in organizers who used the public language switcher were switched back to their
   profile language after the reload, because the profile language was enforced on every page load;
   server-side rendering also let the profile language win over the chosen language.
