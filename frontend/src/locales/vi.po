@@ -35,7 +35,7 @@ msgstr "(trống)"
 msgid "(none)"
 msgstr "(không có)"
 
-#: src/components/routes/event/Translations/index.tsx:91
+#: src/components/routes/event/Translations/index.tsx:128
 msgid "(original texts)"
 msgstr "(văn bản gốc)"
 
@@ -2821,7 +2821,7 @@ msgstr "Đã kết nối nhầm tài khoản Stripe? Hãy ngắt kết nối và
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:492
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:497
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:164
-#: src/components/routes/event/Translations/index.tsx:54
+#: src/components/routes/event/Translations/index.tsx:91
 msgid "Connection Details"
 msgstr "Chi tiết kết nối"
 
@@ -2866,7 +2866,7 @@ msgstr "Tiếp tục"
 
 #: src/components/common/WidgetEditor/index.tsx:221
 #: src/components/routes/event/HomepageDesigner/index.tsx:278
-#: src/components/routes/event/Translations/index.tsx:51
+#: src/components/routes/event/Translations/index.tsx:88
 msgid "Continue Button Text"
 msgstr "Văn bản nút Tiếp tục"
 
@@ -3758,9 +3758,9 @@ msgstr "Yêu cầu xóa"
 #: src/components/modals/DuplicateEventModal/index.tsx:116
 #: src/components/routes/admin/SpamEvents/index.tsx:235
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:98
-#: src/components/routes/event/Translations/index.tsx:56
-#: src/components/routes/event/Translations/index.tsx:59
-#: src/components/routes/event/Translations/index.tsx:63
+#: src/components/routes/event/Translations/index.tsx:93
+#: src/components/routes/event/Translations/index.tsx:96
+#: src/components/routes/event/Translations/index.tsx:100
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:86
 msgid "Description"
 msgstr "Mô tả"
@@ -4650,13 +4650,13 @@ msgid "Event deleted successfully"
 msgstr "Sự kiện đã được xóa thành công"
 
 #: src/components/modals/CreateEventModal/index.tsx:200
-#: src/components/routes/event/Translations/index.tsx:47
+#: src/components/routes/event/Translations/index.tsx:84
 msgid "Event Description"
 msgstr "Mô tả sự kiện"
 
 #: src/components/routes/event/Settings/index.tsx:48
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:71
-#: src/components/routes/event/Translations/index.tsx:71
+#: src/components/routes/event/Translations/index.tsx:108
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:627
 msgid "Event Details"
 msgstr "Chi tiết sự kiện"
@@ -4704,6 +4704,7 @@ msgstr "Sự kiện đã được khôi phục thành công"
 
 #: src/components/layouts/Event/index.tsx:118
 #: src/components/routes/event/Settings/index.tsx:173
+#: src/components/routes/event/Translations/index.tsx:320
 msgid "Event Settings"
 msgstr "Cài đặt sự kiện"
 
@@ -4721,7 +4722,7 @@ msgid "Event status updated"
 msgstr "Trạng thái sự kiện đã được cập nhật"
 
 #: src/components/common/AdminEventsTable/index.tsx:86
-#: src/components/routes/event/Translations/index.tsx:46
+#: src/components/routes/event/Translations/index.tsx:83
 msgid "Event Title"
 msgstr "Tiêu đề sự kiện"
 
@@ -5207,7 +5208,7 @@ msgstr "Tải ảnh lên không thành công. Vui lòng thử lại."
 msgid "Failed to verify email"
 msgstr "Không thể xác thực email"
 
-#: src/components/routes/event/Translations/index.tsx:136
+#: src/components/routes/event/Translations/index.tsx:173
 msgid "Fallback for other languages"
 msgstr "Ngôn ngữ dự phòng cho các ngôn ngữ khác"
 
@@ -5574,7 +5575,7 @@ msgid "Get Tickets"
 msgstr "Lấy vé"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:285
-#: src/components/routes/event/Translations/index.tsx:52
+#: src/components/routes/event/Translations/index.tsx:89
 msgid "Get Tickets Button Text"
 msgstr "Văn bản nút Lấy vé"
 
@@ -5837,7 +5838,7 @@ msgid "Highlight"
 msgstr "Nổi bật"
 
 #: src/components/forms/ProductForm/index.tsx:606
-#: src/components/routes/event/Translations/index.tsx:60
+#: src/components/routes/event/Translations/index.tsx:97
 msgid "Highlight Message"
 msgstr "Tin nhắn nổi bật"
 
@@ -6330,7 +6331,7 @@ msgstr "Tiếng Hàn"
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:454
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1024
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:45
-#: src/components/routes/event/Translations/index.tsx:61
+#: src/components/routes/event/Translations/index.tsx:98
 msgid "Label"
 msgstr "Nhãn"
 
@@ -6348,11 +6349,11 @@ msgstr "cập nhật nhãn"
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: src/components/routes/event/Translations/index.tsx:108
+#: src/components/routes/event/Translations/index.tsx:145
 msgid "Language of your texts"
 msgstr "Ngôn ngữ của nội dung"
 
-#: src/components/routes/event/Translations/index.tsx:99
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Languages saved"
 msgstr "Đã lưu ngôn ngữ"
 
@@ -7045,7 +7046,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:55
+#: src/components/routes/event/Translations/index.tsx:92
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "Tên"
@@ -7375,6 +7376,10 @@ msgstr "Không có hoạt động của nhà tổ chức trong 14 ngày qua"
 msgid "No organizer context available."
 msgstr "Không có ngữ cảnh nhà tổ chức."
 
+#: src/components/routes/event/Translations/index.tsx:316
+msgid "No original text yet. Add it in the event settings, then translate it here."
+msgstr "Chưa có văn bản gốc. Hãy thêm trong phần cài đặt sự kiện, sau đó dịch tại đây."
+
 #: src/components/modals/SwitchOrganizerModal/index.tsx:57
 msgid "No other organizers available"
 msgstr "Không có nhà tổ chức nào khác"
@@ -7417,7 +7422,7 @@ msgid "No products have waiting entries"
 msgstr "Không có sản phẩm nào có người trong danh sách chờ"
 
 #: src/components/forms/ProductCategoryForm/index.tsx:23
-#: src/components/routes/event/Translations/index.tsx:57
+#: src/components/routes/event/Translations/index.tsx:94
 msgid "No products message"
 msgstr "Thông báo khi không có sản phẩm"
 
@@ -7559,6 +7564,10 @@ msgstr "Không tính"
 #: src/components/common/CheckInStatusModal/index.tsx:124
 msgid "Not Eligible"
 msgstr "Không Đủ Điều Kiện"
+
+#: src/components/routes/event/Translations/index.tsx:315
+msgid "Not set. Visitors see the default button text in their own language."
+msgstr "Chưa thiết lập. Khách truy cập sẽ thấy văn bản nút mặc định bằng ngôn ngữ của họ."
 
 #: src/components/common/ProductPriceAvailability/index.tsx:43
 msgid "Not yet on sale"
@@ -7702,7 +7711,7 @@ msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "Thanh toán offline không thành công. Vui lòng thử loại hoặc liên hệ với ban tổ chức sự kiện."
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
-#: src/components/routes/event/Translations/index.tsx:53
+#: src/components/routes/event/Translations/index.tsx:90
 msgid "Offline Payment Instructions"
 msgstr "Hướng Dẫn Thanh Toán Offline"
 
@@ -7943,7 +7952,7 @@ msgid "options"
 msgstr "tùy chọn"
 
 #: src/components/forms/QuestionForm/index.tsx:28
-#: src/components/routes/event/Translations/index.tsx:64
+#: src/components/routes/event/Translations/index.tsx:101
 msgid "Options"
 msgstr "Tùy chọn"
 
@@ -8250,7 +8259,7 @@ msgstr "Nhà tổ chức"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "Ban tổ chức chỉ có thể quản lý các sự kiện và sản phẩm. Họ không thể quản lý người dùng, tài khoản hoặc thông tin thanh toán."
 
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:338
 msgid "Original changed"
 msgstr "Bản gốc đã thay đổi"
 
@@ -8808,7 +8817,7 @@ msgid "Position"
 msgstr "Vị trí"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:97
-#: src/components/routes/event/Translations/index.tsx:49
+#: src/components/routes/event/Translations/index.tsx:86
 msgid "Post Checkout message"
 msgstr "Tin nhắn sau phần thanh toán"
 
@@ -8817,7 +8826,7 @@ msgid "Powered by"
 msgstr "Được cung cấp bởi"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:90
-#: src/components/routes/event/Translations/index.tsx:48
+#: src/components/routes/event/Translations/index.tsx:85
 msgid "Pre Checkout message"
 msgstr "Thông báo trước khi thanh toán"
 
@@ -8951,7 +8960,7 @@ msgstr "Xóa sản phẩm"
 msgid "Product deleted successfully"
 msgstr "Sản phẩm đã xóa thành công"
 
-#: src/components/routes/event/Translations/index.tsx:50
+#: src/components/routes/event/Translations/index.tsx:87
 msgid "Product page message"
 msgstr "Thông báo trên trang sản phẩm"
 
@@ -9184,7 +9193,7 @@ msgid "Question Description"
 msgstr "Mô tả câu hỏi"
 
 #: src/components/forms/QuestionForm/index.tsx:178
-#: src/components/routes/event/Translations/index.tsx:62
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Question Title"
 msgstr "Tiêu đề câu hỏi"
 
@@ -9422,7 +9431,7 @@ msgstr "Đăng ký"
 
 #: src/components/common/QuestionsTable/index.tsx:413
 #: src/components/layouts/Event/index.tsx:121
-#: src/components/routes/event/Translations/index.tsx:73
+#: src/components/routes/event/Translations/index.tsx:110
 msgid "Registration Questions"
 msgstr "Câu hỏi đăng ký"
 
@@ -9797,7 +9806,7 @@ msgstr "Thứ Bảy"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:154
+#: src/components/routes/event/Translations/index.tsx:191
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9816,7 +9825,7 @@ msgstr "Lưu"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:298
+#: src/components/routes/event/Translations/index.tsx:359
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "Lưu thay đổi"
@@ -10779,8 +10788,8 @@ msgstr "Đã xảy ra lỗi. Vui lòng thử lại sau."
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:100
-#: src/components/routes/event/Translations/index.tsx:234
+#: src/components/routes/event/Translations/index.tsx:137
+#: src/components/routes/event/Translations/index.tsx:271
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12033,7 +12042,7 @@ msgstr "Vé"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/routes/event/products.tsx:48
-#: src/components/routes/event/Translations/index.tsx:72
+#: src/components/routes/event/Translations/index.tsx:109
 msgid "Tickets & Products"
 msgstr "Vé & Sản phẩm"
 
@@ -12107,7 +12116,7 @@ msgstr "Múi giờ"
 
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
-#: src/components/routes/event/Translations/index.tsx:58
+#: src/components/routes/event/Translations/index.tsx:95
 msgid "Title"
 msgstr "Tiêu đề"
 
@@ -12252,20 +12261,20 @@ msgstr "Theo dõi sự phát triển và hiệu suất tài khoản theo nguồn
 msgid "Tracking & Analytics"
 msgstr "Theo dõi & Phân tích"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:161
 msgid "Translate into"
 msgstr "Dịch sang"
 
-#: src/components/routes/event/Translations/index.tsx:314
+#: src/components/routes/event/Translations/index.tsx:375
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "Dịch các nội dung của sự kiện. Khách truy cập sẽ thấy chúng bằng ngôn ngữ của họ. Nội dung chưa được dịch sẽ dùng ngôn ngữ dự phòng hoặc văn bản gốc."
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:315
+#: src/components/routes/event/Translations/index.tsx:376
 msgid "Translations"
 msgstr "Bản dịch"
 
-#: src/components/routes/event/Translations/index.tsx:233
+#: src/components/routes/event/Translations/index.tsx:270
 msgid "Translations saved"
 msgstr "Đã lưu bản dịch"
 
@@ -12983,7 +12992,7 @@ msgstr "Hiển thị từ {start} — ẩn cho tới khi mở bán."
 msgid "Visible to everyone on the event page."
 msgstr "Hiển thị với mọi người trên trang sự kiện."
 
-#: src/components/routes/event/Translations/index.tsx:137
+#: src/components/routes/event/Translations/index.tsx:174
 msgid "Visitors whose language has no translation see this language."
 msgstr "Khách truy cập có ngôn ngữ chưa được dịch sẽ thấy ngôn ngữ này."
 

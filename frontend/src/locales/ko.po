@@ -35,7 +35,7 @@ msgstr "(비어 있음)"
 msgid "(none)"
 msgstr "(없음)"
 
-#: src/components/routes/event/Translations/index.tsx:91
+#: src/components/routes/event/Translations/index.tsx:128
 msgid "(original texts)"
 msgstr "(원문)"
 
@@ -2821,7 +2821,7 @@ msgstr "잘못된 Stripe 계정을 연결하셨나요? 연결을 해제하고 �
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:492
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:497
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:164
-#: src/components/routes/event/Translations/index.tsx:54
+#: src/components/routes/event/Translations/index.tsx:91
 msgid "Connection Details"
 msgstr "연결 정보"
 
@@ -2866,7 +2866,7 @@ msgstr "계속"
 
 #: src/components/common/WidgetEditor/index.tsx:221
 #: src/components/routes/event/HomepageDesigner/index.tsx:278
-#: src/components/routes/event/Translations/index.tsx:51
+#: src/components/routes/event/Translations/index.tsx:88
 msgid "Continue Button Text"
 msgstr "계속 버튼 텍스트"
 
@@ -3758,9 +3758,9 @@ msgstr "삭제 요청"
 #: src/components/modals/DuplicateEventModal/index.tsx:116
 #: src/components/routes/admin/SpamEvents/index.tsx:235
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:98
-#: src/components/routes/event/Translations/index.tsx:56
-#: src/components/routes/event/Translations/index.tsx:59
-#: src/components/routes/event/Translations/index.tsx:63
+#: src/components/routes/event/Translations/index.tsx:93
+#: src/components/routes/event/Translations/index.tsx:96
+#: src/components/routes/event/Translations/index.tsx:100
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:86
 msgid "Description"
 msgstr "설명"
@@ -4650,13 +4650,13 @@ msgid "Event deleted successfully"
 msgstr "이벤트가 성공적으로 삭제되었습니다"
 
 #: src/components/modals/CreateEventModal/index.tsx:200
-#: src/components/routes/event/Translations/index.tsx:47
+#: src/components/routes/event/Translations/index.tsx:84
 msgid "Event Description"
 msgstr "이벤트 설명"
 
 #: src/components/routes/event/Settings/index.tsx:48
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:71
-#: src/components/routes/event/Translations/index.tsx:71
+#: src/components/routes/event/Translations/index.tsx:108
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:627
 msgid "Event Details"
 msgstr "이벤트 상세 정보"
@@ -4704,6 +4704,7 @@ msgstr "이벤트가 성공적으로 복원되었습니다"
 
 #: src/components/layouts/Event/index.tsx:118
 #: src/components/routes/event/Settings/index.tsx:173
+#: src/components/routes/event/Translations/index.tsx:320
 msgid "Event Settings"
 msgstr "이벤트 설정"
 
@@ -4721,7 +4722,7 @@ msgid "Event status updated"
 msgstr "이벤트 상태가 업데이트되었습니다"
 
 #: src/components/common/AdminEventsTable/index.tsx:86
-#: src/components/routes/event/Translations/index.tsx:46
+#: src/components/routes/event/Translations/index.tsx:83
 msgid "Event Title"
 msgstr "이벤트 제목"
 
@@ -5207,7 +5208,7 @@ msgstr "이미지 업로드에 실패했습니다. 다시 시도해 주세요."
 msgid "Failed to verify email"
 msgstr "이메일 인증에 실패했습니다"
 
-#: src/components/routes/event/Translations/index.tsx:136
+#: src/components/routes/event/Translations/index.tsx:173
 msgid "Fallback for other languages"
 msgstr "다른 언어의 대체 언어"
 
@@ -5574,7 +5575,7 @@ msgid "Get Tickets"
 msgstr "티켓 구매하기"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:285
-#: src/components/routes/event/Translations/index.tsx:52
+#: src/components/routes/event/Translations/index.tsx:89
 msgid "Get Tickets Button Text"
 msgstr "티켓 구매 버튼 문구"
 
@@ -5837,7 +5838,7 @@ msgid "Highlight"
 msgstr "강조"
 
 #: src/components/forms/ProductForm/index.tsx:606
-#: src/components/routes/event/Translations/index.tsx:60
+#: src/components/routes/event/Translations/index.tsx:97
 msgid "Highlight Message"
 msgstr "강조 메시지"
 
@@ -6330,7 +6331,7 @@ msgstr "한국어"
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:454
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1024
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:45
-#: src/components/routes/event/Translations/index.tsx:61
+#: src/components/routes/event/Translations/index.tsx:98
 msgid "Label"
 msgstr "레이블"
 
@@ -6348,11 +6349,11 @@ msgstr "라벨 업데이트"
 msgid "Language"
 msgstr "언어"
 
-#: src/components/routes/event/Translations/index.tsx:108
+#: src/components/routes/event/Translations/index.tsx:145
 msgid "Language of your texts"
 msgstr "텍스트 언어"
 
-#: src/components/routes/event/Translations/index.tsx:99
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Languages saved"
 msgstr "언어가 저장되었습니다"
 
@@ -7045,7 +7046,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:55
+#: src/components/routes/event/Translations/index.tsx:92
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "이름"
@@ -7375,6 +7376,10 @@ msgstr "최근 14일간 주최자 활동이 없습니다"
 msgid "No organizer context available."
 msgstr "주최자 정보를 사용할 수 없습니다."
 
+#: src/components/routes/event/Translations/index.tsx:316
+msgid "No original text yet. Add it in the event settings, then translate it here."
+msgstr "아직 원문이 없습니다. 이벤트 설정에서 추가한 후 여기에서 번역하세요."
+
 #: src/components/modals/SwitchOrganizerModal/index.tsx:57
 msgid "No other organizers available"
 msgstr "이용 가능한 다른 주최자가 없습니다"
@@ -7417,7 +7422,7 @@ msgid "No products have waiting entries"
 msgstr "대기 항목이 있는 상품이 없습니다"
 
 #: src/components/forms/ProductCategoryForm/index.tsx:23
-#: src/components/routes/event/Translations/index.tsx:57
+#: src/components/routes/event/Translations/index.tsx:94
 msgid "No products message"
 msgstr "상품 없음 메시지"
 
@@ -7559,6 +7564,10 @@ msgstr "집계되지 않음"
 #: src/components/common/CheckInStatusModal/index.tsx:124
 msgid "Not Eligible"
 msgstr "대상 아님"
+
+#: src/components/routes/event/Translations/index.tsx:315
+msgid "Not set. Visitors see the default button text in their own language."
+msgstr "설정되지 않았습니다. 방문자에게는 기본 버튼 텍스트가 자신의 언어로 표시됩니다."
 
 #: src/components/common/ProductPriceAvailability/index.tsx:43
 msgid "Not yet on sale"
@@ -7702,7 +7711,7 @@ msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "무통장 결제에 실패했습니다. 다시 시도하시거나 이벤트 주최자에게 문의해 주세요."
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
-#: src/components/routes/event/Translations/index.tsx:53
+#: src/components/routes/event/Translations/index.tsx:90
 msgid "Offline Payment Instructions"
 msgstr "무통장 입금 안내"
 
@@ -7943,7 +7952,7 @@ msgid "options"
 msgstr "옵션"
 
 #: src/components/forms/QuestionForm/index.tsx:28
-#: src/components/routes/event/Translations/index.tsx:64
+#: src/components/routes/event/Translations/index.tsx:101
 msgid "Options"
 msgstr "옵션"
 
@@ -8250,7 +8259,7 @@ msgstr "주최자"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "주최자는 이벤트와 상품만 관리할 수 있습니다. 사용자, 계정 설정, 청구 정보는 관리할 수 없습니다."
 
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:338
 msgid "Original changed"
 msgstr "원문 변경됨"
 
@@ -8808,7 +8817,7 @@ msgid "Position"
 msgstr "위치"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:97
-#: src/components/routes/event/Translations/index.tsx:49
+#: src/components/routes/event/Translations/index.tsx:86
 msgid "Post Checkout message"
 msgstr "결제 완료 후 메시지"
 
@@ -8817,7 +8826,7 @@ msgid "Powered by"
 msgstr "제공:"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:90
-#: src/components/routes/event/Translations/index.tsx:48
+#: src/components/routes/event/Translations/index.tsx:85
 msgid "Pre Checkout message"
 msgstr "결제 전 메시지"
 
@@ -8951,7 +8960,7 @@ msgstr "상품 삭제됨"
 msgid "Product deleted successfully"
 msgstr "상품이 성공적으로 삭제되었습니다"
 
-#: src/components/routes/event/Translations/index.tsx:50
+#: src/components/routes/event/Translations/index.tsx:87
 msgid "Product page message"
 msgstr "상품 페이지 메시지"
 
@@ -9184,7 +9193,7 @@ msgid "Question Description"
 msgstr "질문 설명"
 
 #: src/components/forms/QuestionForm/index.tsx:178
-#: src/components/routes/event/Translations/index.tsx:62
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Question Title"
 msgstr "질문 제목"
 
@@ -9422,7 +9431,7 @@ msgstr "등록"
 
 #: src/components/common/QuestionsTable/index.tsx:413
 #: src/components/layouts/Event/index.tsx:121
-#: src/components/routes/event/Translations/index.tsx:73
+#: src/components/routes/event/Translations/index.tsx:110
 msgid "Registration Questions"
 msgstr "등록 질문"
 
@@ -9797,7 +9806,7 @@ msgstr "토요일"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:154
+#: src/components/routes/event/Translations/index.tsx:191
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9816,7 +9825,7 @@ msgstr "저장"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:298
+#: src/components/routes/event/Translations/index.tsx:359
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "변경사항 저장"
@@ -10779,8 +10788,8 @@ msgstr "문제가 발생했습니다. 나중에 다시 시도해 주세요."
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:100
-#: src/components/routes/event/Translations/index.tsx:234
+#: src/components/routes/event/Translations/index.tsx:137
+#: src/components/routes/event/Translations/index.tsx:271
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12033,7 +12042,7 @@ msgstr "티켓"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/routes/event/products.tsx:48
-#: src/components/routes/event/Translations/index.tsx:72
+#: src/components/routes/event/Translations/index.tsx:109
 msgid "Tickets & Products"
 msgstr "티켓 및 상품"
 
@@ -12107,7 +12116,7 @@ msgstr "시간대"
 
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
-#: src/components/routes/event/Translations/index.tsx:58
+#: src/components/routes/event/Translations/index.tsx:95
 msgid "Title"
 msgstr "제목"
 
@@ -12252,20 +12261,20 @@ msgstr "유입 경로별 계정 성장 및 성과를 추적하세요"
 msgid "Tracking & Analytics"
 msgstr "추적 및 분석"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:161
 msgid "Translate into"
 msgstr "번역할 언어"
 
-#: src/components/routes/event/Translations/index.tsx:314
+#: src/components/routes/event/Translations/index.tsx:375
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "이벤트 텍스트를 번역하세요. 방문자는 자신의 언어로 보게 됩니다. 번역이 없는 텍스트는 대체 언어 또는 원문으로 표시됩니다."
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:315
+#: src/components/routes/event/Translations/index.tsx:376
 msgid "Translations"
 msgstr "번역"
 
-#: src/components/routes/event/Translations/index.tsx:233
+#: src/components/routes/event/Translations/index.tsx:270
 msgid "Translations saved"
 msgstr "번역이 저장되었습니다"
 
@@ -12983,7 +12992,7 @@ msgstr "{start}부터 표시됩니다. 판매 시작 전까지 숨겨집니다."
 msgid "Visible to everyone on the event page."
 msgstr "이벤트 페이지에서 모두에게 표시됩니다."
 
-#: src/components/routes/event/Translations/index.tsx:137
+#: src/components/routes/event/Translations/index.tsx:174
 msgid "Visitors whose language has no translation see this language."
 msgstr "번역이 없는 언어의 방문자에게는 이 언어가 표시됩니다."
 

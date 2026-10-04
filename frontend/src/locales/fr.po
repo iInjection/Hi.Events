@@ -35,7 +35,7 @@ msgstr "(vide)"
 msgid "(none)"
 msgstr "(aucun)"
 
-#: src/components/routes/event/Translations/index.tsx:91
+#: src/components/routes/event/Translations/index.tsx:128
 msgid "(original texts)"
 msgstr "(textes originaux)"
 
@@ -2821,7 +2821,7 @@ msgstr "Mauvais compte Stripe connecté ? Déconnectez-le et recommencez."
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:492
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:497
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:164
-#: src/components/routes/event/Translations/index.tsx:54
+#: src/components/routes/event/Translations/index.tsx:91
 msgid "Connection Details"
 msgstr "Détails de connexion"
 
@@ -2866,7 +2866,7 @@ msgstr "Continuer"
 
 #: src/components/common/WidgetEditor/index.tsx:221
 #: src/components/routes/event/HomepageDesigner/index.tsx:278
-#: src/components/routes/event/Translations/index.tsx:51
+#: src/components/routes/event/Translations/index.tsx:88
 msgid "Continue Button Text"
 msgstr "Texte du bouton Continuer"
 
@@ -3758,9 +3758,9 @@ msgstr "Demandes de suppression"
 #: src/components/modals/DuplicateEventModal/index.tsx:116
 #: src/components/routes/admin/SpamEvents/index.tsx:235
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:98
-#: src/components/routes/event/Translations/index.tsx:56
-#: src/components/routes/event/Translations/index.tsx:59
-#: src/components/routes/event/Translations/index.tsx:63
+#: src/components/routes/event/Translations/index.tsx:93
+#: src/components/routes/event/Translations/index.tsx:96
+#: src/components/routes/event/Translations/index.tsx:100
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:86
 msgid "Description"
 msgstr "Description"
@@ -4650,13 +4650,13 @@ msgid "Event deleted successfully"
 msgstr "Événement supprimé avec succès"
 
 #: src/components/modals/CreateEventModal/index.tsx:200
-#: src/components/routes/event/Translations/index.tsx:47
+#: src/components/routes/event/Translations/index.tsx:84
 msgid "Event Description"
 msgstr "Description de l'événement"
 
 #: src/components/routes/event/Settings/index.tsx:48
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:71
-#: src/components/routes/event/Translations/index.tsx:71
+#: src/components/routes/event/Translations/index.tsx:108
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:627
 msgid "Event Details"
 msgstr "Détails de l'événement"
@@ -4704,6 +4704,7 @@ msgstr "Événement restauré avec succès"
 
 #: src/components/layouts/Event/index.tsx:118
 #: src/components/routes/event/Settings/index.tsx:173
+#: src/components/routes/event/Translations/index.tsx:320
 msgid "Event Settings"
 msgstr "Paramètres de l'événement"
 
@@ -4721,7 +4722,7 @@ msgid "Event status updated"
 msgstr "Statut de l'événement mis à jour"
 
 #: src/components/common/AdminEventsTable/index.tsx:86
-#: src/components/routes/event/Translations/index.tsx:46
+#: src/components/routes/event/Translations/index.tsx:83
 msgid "Event Title"
 msgstr "Titre de l'événement"
 
@@ -5207,7 +5208,7 @@ msgstr "Échec du téléchargement de l'image. Veuillez réessayer."
 msgid "Failed to verify email"
 msgstr "Échec de la vérification de l'e-mail"
 
-#: src/components/routes/event/Translations/index.tsx:136
+#: src/components/routes/event/Translations/index.tsx:173
 msgid "Fallback for other languages"
 msgstr "Langue de secours pour les autres langues"
 
@@ -5574,7 +5575,7 @@ msgid "Get Tickets"
 msgstr "Obtenir des billets"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:285
-#: src/components/routes/event/Translations/index.tsx:52
+#: src/components/routes/event/Translations/index.tsx:89
 msgid "Get Tickets Button Text"
 msgstr "Texte du bouton Obtenir des billets"
 
@@ -5837,7 +5838,7 @@ msgid "Highlight"
 msgstr "Mettre en avant"
 
 #: src/components/forms/ProductForm/index.tsx:606
-#: src/components/routes/event/Translations/index.tsx:60
+#: src/components/routes/event/Translations/index.tsx:97
 msgid "Highlight Message"
 msgstr "Message de mise en avant"
 
@@ -6330,7 +6331,7 @@ msgstr "Coréen"
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:454
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1024
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:45
-#: src/components/routes/event/Translations/index.tsx:61
+#: src/components/routes/event/Translations/index.tsx:98
 msgid "Label"
 msgstr "Étiquette"
 
@@ -6348,11 +6349,11 @@ msgstr "mises à jour de libellé"
 msgid "Language"
 msgstr "Langue"
 
-#: src/components/routes/event/Translations/index.tsx:108
+#: src/components/routes/event/Translations/index.tsx:145
 msgid "Language of your texts"
 msgstr "Langue de vos textes"
 
-#: src/components/routes/event/Translations/index.tsx:99
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Languages saved"
 msgstr "Langues enregistrées"
 
@@ -7045,7 +7046,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:55
+#: src/components/routes/event/Translations/index.tsx:92
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "Nom"
@@ -7375,6 +7376,10 @@ msgstr "Aucune activité d'organisateur au cours des 14 derniers jours"
 msgid "No organizer context available."
 msgstr "Aucun contexte d'organisateur disponible."
 
+#: src/components/routes/event/Translations/index.tsx:316
+msgid "No original text yet. Add it in the event settings, then translate it here."
+msgstr "Pas encore de texte original. Ajoutez-le dans les paramètres de l'événement, puis traduisez-le ici."
+
 #: src/components/modals/SwitchOrganizerModal/index.tsx:57
 msgid "No other organizers available"
 msgstr "Aucun autre organisateur disponible"
@@ -7417,7 +7422,7 @@ msgid "No products have waiting entries"
 msgstr "Aucun produit n'a d'entrées en liste d'attente"
 
 #: src/components/forms/ProductCategoryForm/index.tsx:23
-#: src/components/routes/event/Translations/index.tsx:57
+#: src/components/routes/event/Translations/index.tsx:94
 msgid "No products message"
 msgstr "Message d'absence de produits"
 
@@ -7559,6 +7564,10 @@ msgstr "Non compté"
 #: src/components/common/CheckInStatusModal/index.tsx:124
 msgid "Not Eligible"
 msgstr "Non Éligible"
+
+#: src/components/routes/event/Translations/index.tsx:315
+msgid "Not set. Visitors see the default button text in their own language."
+msgstr "Non défini. Les visiteurs voient le texte du bouton par défaut dans leur propre langue."
 
 #: src/components/common/ProductPriceAvailability/index.tsx:43
 msgid "Not yet on sale"
@@ -7702,7 +7711,7 @@ msgid "Offline payment failed. Please try again or contact the event organizer."
 msgstr "Le paiement hors ligne a échoué. Veuillez réessayer ou contacter l'organisateur de l'événement."
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:152
-#: src/components/routes/event/Translations/index.tsx:53
+#: src/components/routes/event/Translations/index.tsx:90
 msgid "Offline Payment Instructions"
 msgstr "Instructions de Paiement Hors Ligne"
 
@@ -7943,7 +7952,7 @@ msgid "options"
 msgstr "options"
 
 #: src/components/forms/QuestionForm/index.tsx:28
-#: src/components/routes/event/Translations/index.tsx:64
+#: src/components/routes/event/Translations/index.tsx:101
 msgid "Options"
 msgstr "Possibilités"
 
@@ -8250,7 +8259,7 @@ msgstr "Organisateurs"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "Les organisateurs ne peuvent gérer que les événements et les produits. Ils ne peuvent pas gérer les utilisateurs, les paramètres du compte ou les informations de facturation."
 
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:338
 msgid "Original changed"
 msgstr "Original modifié"
 
@@ -8808,7 +8817,7 @@ msgid "Position"
 msgstr "Position"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:97
-#: src/components/routes/event/Translations/index.tsx:49
+#: src/components/routes/event/Translations/index.tsx:86
 msgid "Post Checkout message"
 msgstr "Message après le paiement"
 
@@ -8817,7 +8826,7 @@ msgid "Powered by"
 msgstr "Propulsé par"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:90
-#: src/components/routes/event/Translations/index.tsx:48
+#: src/components/routes/event/Translations/index.tsx:85
 msgid "Pre Checkout message"
 msgstr "Message de pré-commande"
 
@@ -8951,7 +8960,7 @@ msgstr "Produit supprimé"
 msgid "Product deleted successfully"
 msgstr "Produit supprimé avec succès"
 
-#: src/components/routes/event/Translations/index.tsx:50
+#: src/components/routes/event/Translations/index.tsx:87
 msgid "Product page message"
 msgstr "Message de la page des produits"
 
@@ -9184,7 +9193,7 @@ msgid "Question Description"
 msgstr "Description de la question"
 
 #: src/components/forms/QuestionForm/index.tsx:178
-#: src/components/routes/event/Translations/index.tsx:62
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Question Title"
 msgstr "Titre de question"
 
@@ -9422,7 +9431,7 @@ msgstr "S'inscrire"
 
 #: src/components/common/QuestionsTable/index.tsx:413
 #: src/components/layouts/Event/index.tsx:121
-#: src/components/routes/event/Translations/index.tsx:73
+#: src/components/routes/event/Translations/index.tsx:110
 msgid "Registration Questions"
 msgstr "Questions d'inscription"
 
@@ -9797,7 +9806,7 @@ msgstr "Samedi"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:154
+#: src/components/routes/event/Translations/index.tsx:191
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9816,7 +9825,7 @@ msgstr "Sauvegarder"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:298
+#: src/components/routes/event/Translations/index.tsx:359
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "Sauvegarder les modifications"
@@ -10779,8 +10788,8 @@ msgstr "Une erreur s'est produite. Veuillez réessayer plus tard."
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:100
-#: src/components/routes/event/Translations/index.tsx:234
+#: src/components/routes/event/Translations/index.tsx:137
+#: src/components/routes/event/Translations/index.tsx:271
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12033,7 +12042,7 @@ msgstr "Billets"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/routes/event/products.tsx:48
-#: src/components/routes/event/Translations/index.tsx:72
+#: src/components/routes/event/Translations/index.tsx:109
 msgid "Tickets & Products"
 msgstr "Billets et produits"
 
@@ -12107,7 +12116,7 @@ msgstr "Fuseau horaire"
 
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
-#: src/components/routes/event/Translations/index.tsx:58
+#: src/components/routes/event/Translations/index.tsx:95
 msgid "Title"
 msgstr "Titre"
 
@@ -12252,20 +12261,20 @@ msgstr "Suivez la croissance et les performances des comptes par source d'attrib
 msgid "Tracking & Analytics"
 msgstr "Suivi et analytique"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:161
 msgid "Translate into"
 msgstr "Traduire en"
 
-#: src/components/routes/event/Translations/index.tsx:314
+#: src/components/routes/event/Translations/index.tsx:375
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "Traduisez les textes de votre événement. Les visiteurs les voient dans leur langue. Les textes sans traduction utilisent la langue de secours ou votre texte original."
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:315
+#: src/components/routes/event/Translations/index.tsx:376
 msgid "Translations"
 msgstr "Traductions"
 
-#: src/components/routes/event/Translations/index.tsx:233
+#: src/components/routes/event/Translations/index.tsx:270
 msgid "Translations saved"
 msgstr "Traductions enregistrées"
 
@@ -12983,7 +12992,7 @@ msgstr "Visible à partir du {start} — masqué jusqu'à l'ouverture des ventes
 msgid "Visible to everyone on the event page."
 msgstr "Visible par tous sur la page de l'événement."
 
-#: src/components/routes/event/Translations/index.tsx:137
+#: src/components/routes/event/Translations/index.tsx:174
 msgid "Visitors whose language has no translation see this language."
 msgstr "Les visiteurs dont la langue n'a pas de traduction voient cette langue."
 

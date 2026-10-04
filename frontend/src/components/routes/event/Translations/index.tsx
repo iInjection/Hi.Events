@@ -1,8 +1,20 @@
 import {useEffect, useMemo, useState} from "react";
-import {useParams} from "react-router";
+import {NavLink, useParams} from "react-router";
 import {t} from "@lingui/macro";
 import {i18n} from "@lingui/core";
-import {Badge, Button, Group, MultiSelect, SegmentedControl, Select, Stack, Text, Textarea, TextInput} from "@mantine/core";
+import {
+    Anchor,
+    Badge,
+    Button,
+    Group,
+    MultiSelect,
+    SegmentedControl,
+    Select,
+    Stack,
+    Text,
+    Textarea,
+    TextInput
+} from "@mantine/core";
 import {PageBody} from "../../../common/PageBody";
 import {PageTitle} from "../../../common/PageTitle";
 import {Card} from "../../../common/Card";
@@ -41,7 +53,32 @@ const localeOptions = () => Object.keys(localeToNameMap).map(locale => ({
     label: `${localeToFlagEmojiMap[locale as SupportedLocales]} ${localeToNameMap[locale as SupportedLocales]}`,
 }));
 
-const fieldLabel = (item: TranslatableContentItem): string => {
+const EVENT_DETAIL_FIELDS: Array<{ type: TranslatableContentType, field: string }> = [
+    {type: 'event', field: 'title'},
+    {type: 'event', field: 'description'},
+    {type: 'event_setting', field: 'pre_checkout_message'},
+    {type: 'event_setting', field: 'post_checkout_message'},
+    {type: 'event_setting', field: 'continue_button_text'},
+    {type: 'event_setting', field: 'get_tickets_button_text'},
+    {type: 'event_setting', field: 'offline_payment_instructions'},
+    {type: 'event_setting', field: 'online_event_connection_details'},
+];
+
+const BUTTON_TEXT_FIELDS = ['continue_button_text', 'get_tickets_button_text'];
+
+type SectionRow = { item: TranslatableContentItem } | { type: TranslatableContentType, field: string };
+
+const withEmptyEventDetails = (sectionItems: TranslatableContentItem[]): SectionRow[] => [
+    ...EVENT_DETAIL_FIELDS.map(({type, field}) => {
+        const item = sectionItems.find(candidate => candidate.type === type && candidate.field === field);
+        return item ? {item} : {type, field};
+    }),
+    ...sectionItems
+        .filter(item => !EVENT_DETAIL_FIELDS.some(({type, field}) => item.type === type && item.field === field))
+        .map(item => ({item})),
+];
+
+const fieldLabel = ({type, field}: { type: TranslatableContentType, field: string }): string => {
     const labels: Record<string, string> = {
         'event.title': t`Event Title`,
         'event.description': t`Event Description`,
@@ -64,7 +101,7 @@ const fieldLabel = (item: TranslatableContentItem): string => {
         'question.options': t`Options`,
     };
 
-    return labels[`${item.type}.${item.field}`] ?? item.field;
+    return labels[`${type}.${field}`] ?? field;
 };
 
 const sections = (): Array<{ title: string, types: TranslatableContentType[] }> => [
@@ -256,7 +293,11 @@ const TranslationsEditor = ({eventId, items, locales}: {
 
             {sections().map(section => {
                 const sectionItems = items.filter(item => section.types.includes(item.type));
-                if (sectionItems.length === 0) {
+                const rows: SectionRow[] = section.types.includes('event')
+                    ? withEmptyEventDetails(sectionItems)
+                    : sectionItems.map(item => ({item}));
+
+                if (rows.length === 0) {
                     return null;
                 }
 
@@ -264,7 +305,27 @@ const TranslationsEditor = ({eventId, items, locales}: {
                     <Card key={section.title}>
                         <h3 className={classes.sectionTitle}>{section.title}</h3>
                         <Stack gap="md" className={classes.compactInputs}>
-                            {sectionItems.map(item => {
+                            {rows.map(row => {
+                                if (!('item' in row)) {
+                                    return (
+                                        <div key={`${row.type}:${row.field}`} className={classes.item}>
+                                            <Text fw={600} size="sm">{fieldLabel(row)}</Text>
+                                            <Text size="sm" c="dimmed">
+                                                {BUTTON_TEXT_FIELDS.includes(row.field)
+                                                    ? t`Not set. Visitors see the default button text in their own language.`
+                                                    : t`No original text yet. Add it in the event settings, then translate it here.`}
+                                                {' '}
+                                                {!BUTTON_TEXT_FIELDS.includes(row.field) && (
+                                                    <Anchor component={NavLink} to={`/manage/event/${eventId}/settings`} size="sm">
+                                                        {t`Event Settings`}
+                                                    </Anchor>
+                                                )}
+                                            </Text>
+                                        </div>
+                                    );
+                                }
+
+                                const item = row.item;
                                 const key = itemKey(item);
                                 return (
                                     <div key={`${key}:${locale}`} className={classes.item}>

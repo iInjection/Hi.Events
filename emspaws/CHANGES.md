@@ -54,6 +54,11 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 - Tests: `tests/Unit/Services/Domain/ContentTranslation/ContentTranslationServiceTest.php`.
 - Limits: duplicating an event does not copy its translations; emails, PDF tickets, SEO texts and
   email templates are not translated yet (phase 3).
+- Empty event/checkout fields shown on 2026-10-04: the "Event Details" section always lists event
+  title and description and the checkout texts (pre/post checkout message, button texts, offline
+  payment instructions, connection details). Fields without an original show a note with a link
+  to Event Settings; unset button texts explain that visitors see the default text in their own
+  language. Before, empty fields were hidden, which looked like they were not translatable.
 - Layout tightened on 2026-10-04: the Translations page removes upstream's global input and card
   bottom margins (`.compactInputs`, `.page` in `Translations.module.scss`) and uses smaller gaps.
 - Fallback choice fixed on 2026-10-04 (`9a746869`, `fefdff4a`): the fallback list offers
