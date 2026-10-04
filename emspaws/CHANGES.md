@@ -16,7 +16,7 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 
 ## Changes
 
-### Questions added later appear on existing registrations (2026-10-04)
+### Questions added later appear on existing registrations (2026-10-04, `61679c36`)
 - Saving a registration question (create or edit) syncs it to existing registrations: every
   completed order or order awaiting offline payment gets the question without an answer. Order
   questions are added per order; ticket questions per attendee (cancelled attendees skipped);
