@@ -76,21 +76,22 @@ const sections = (): Array<{ title: string, types: TranslatableContentType[] }> 
 const SettingsCard = ({eventId, settings}: { eventId: string, settings: EventTranslationSettings | null }) => {
     const mutation = useUpdateEventTranslationSettings();
     const defaultSourceLocale = getSupportedLocale(i18n.locale || 'en');
+    const defaultFallbackLocale = defaultSourceLocale === 'en' ? null : 'en';
     const [sourceLocale, setSourceLocale] = useState(settings?.source_locale ?? defaultSourceLocale);
-    const [locales, setLocales] = useState<string[]>(settings?.locales ?? []);
+    const [locales, setLocales] = useState<string[]>(
+        settings?.locales ?? (defaultFallbackLocale ? [defaultFallbackLocale] : [])
+    );
     const [fallbackLocale, setFallbackLocale] = useState<string | null>(
-        settings ? settings.fallback_locale : (defaultSourceLocale === 'en' ? null : 'en')
+        settings ? settings.fallback_locale : defaultFallbackLocale
     );
 
     const allLocales = localeOptions();
-    const targetLocales = allLocales.filter(option => option.value !== sourceLocale);
-    const fallbackOptions = allLocales.filter(option => locales.includes(option.value));
+    const otherLocales = allLocales.filter(option => option.value !== sourceLocale);
 
     const save = () => {
-        const fallback = fallbackLocale && locales.includes(fallbackLocale) ? fallbackLocale : null;
         mutation.mutate({
             eventId,
-            settings: {source_locale: sourceLocale, fallback_locale: fallback, locales},
+            settings: {source_locale: sourceLocale, fallback_locale: fallbackLocale, locales},
         }, {
             onSuccess: () => showSuccess(t`Languages saved`),
             onError: () => showError(t`Something went wrong. Please try again.`),
@@ -111,23 +112,37 @@ const SettingsCard = ({eventId, settings}: { eventId: string, settings: EventTra
                         }
                         setSourceLocale(value);
                         setLocales(current => current.filter(locale => locale !== value));
+                        if (fallbackLocale === value) {
+                            setFallbackLocale(null);
+                        }
                     }}
                 />
                 <MultiSelect
                     label={t`Translate into`}
-                    data={targetLocales}
+                    data={otherLocales}
                     value={locales}
-                    onChange={setLocales}
+                    onChange={(value) => {
+                        setLocales(value);
+                        if (fallbackLocale && !value.includes(fallbackLocale)) {
+                            setFallbackLocale(null);
+                        }
+                    }}
                     searchable
                 />
                 <Select
                     label={t`Fallback for other languages`}
                     description={t`Visitors whose language has no translation see this language. Without a fallback they see your original texts.`}
-                    data={fallbackOptions}
-                    value={fallbackLocale && locales.includes(fallbackLocale) ? fallbackLocale : null}
-                    onChange={setFallbackLocale}
+                    data={otherLocales}
+                    value={fallbackLocale}
+                    onChange={(value) => {
+                        setFallbackLocale(value);
+                        if (value && !locales.includes(value)) {
+                            setLocales(current => [...current, value]);
+                        }
+                    }}
                     placeholder={t`None`}
                     clearable
+                    searchable
                 />
                 <Group justify="flex-end">
                     <Button onClick={save} loading={mutation.isPending}>{t`Save`}</Button>
