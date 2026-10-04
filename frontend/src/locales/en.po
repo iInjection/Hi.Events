@@ -35,6 +35,10 @@ msgstr "(empty)"
 msgid "(none)"
 msgstr "(none)"
 
+#: src/components/routes/event/Translations/index.tsx:91
+msgid "(original texts)"
+msgstr "(original texts)"
+
 #: src/components/common/ReportTable/index.tsx:328
 msgid "{0}"
 msgstr "{0}"
@@ -2496,10 +2500,6 @@ msgstr "Click to reopen for new sales"
 #: src/components/common/AttendeeTable/index.tsx:173
 msgid "Click to view notes"
 msgstr "Click to view notes"
-
-#: src/components/routes/product-widget/SelectProducts/index.tsx:956
-#~ msgid "close"
-#~ msgstr "close"
 
 #: src/components/common/SideDrawer/index.tsx:117
 #: src/components/forms/ProductForm/ProductDrawer.tsx:100
@@ -5207,7 +5207,7 @@ msgstr "Failed to upload image. Please try again."
 msgid "Failed to verify email"
 msgstr "Failed to verify email"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Fallback for other languages"
 msgstr "Fallback for other languages"
 
@@ -6348,11 +6348,11 @@ msgstr "label updates"
 msgid "Language"
 msgstr "Language"
 
-#: src/components/routes/event/Translations/index.tsx:104
+#: src/components/routes/event/Translations/index.tsx:108
 msgid "Language of your texts"
 msgstr "Language of your texts"
 
-#: src/components/routes/event/Translations/index.tsx:95
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Languages saved"
 msgstr "Languages saved"
 
@@ -7529,7 +7529,6 @@ msgstr "non-edited"
 #: src/components/common/PromoCodeTable/index.tsx:82
 #: src/components/forms/ProductForm/ledgerSummaries.ts:92
 #: src/components/forms/ProductForm/ledgerSummaries.ts:134
-#: src/components/routes/event/Translations/index.tsx:129
 #: src/components/routes/product-widget/CollectInformation/index.tsx:541
 msgid "None"
 msgstr "None"
@@ -8251,7 +8250,7 @@ msgstr "Organizers"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 
-#: src/components/routes/event/Translations/index.tsx:256
+#: src/components/routes/event/Translations/index.tsx:277
 msgid "Original changed"
 msgstr "Original changed"
 
@@ -9798,7 +9797,7 @@ msgstr "Saturday"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:133
+#: src/components/routes/event/Translations/index.tsx:154
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9817,7 +9816,7 @@ msgstr "Save"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:298
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "Save Changes"
@@ -10780,8 +10779,8 @@ msgstr "Something went wrong. Please try again later."
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:96
-#: src/components/routes/event/Translations/index.tsx:213
+#: src/components/routes/event/Translations/index.tsx:100
+#: src/components/routes/event/Translations/index.tsx:234
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12253,20 +12252,20 @@ msgstr "Track account growth and performance by attribution source"
 msgid "Tracking & Analytics"
 msgstr "Tracking & Analytics"
 
-#: src/components/routes/event/Translations/index.tsx:117
+#: src/components/routes/event/Translations/index.tsx:124
 msgid "Translate into"
 msgstr "Translate into"
 
-#: src/components/routes/event/Translations/index.tsx:293
+#: src/components/routes/event/Translations/index.tsx:314
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:294
+#: src/components/routes/event/Translations/index.tsx:315
 msgid "Translations"
 msgstr "Translations"
 
-#: src/components/routes/event/Translations/index.tsx:212
+#: src/components/routes/event/Translations/index.tsx:233
 msgid "Translations saved"
 msgstr "Translations saved"
 
@@ -12984,9 +12983,9 @@ msgstr "Visible from {start} — hidden until sales open."
 msgid "Visible to everyone on the event page."
 msgstr "Visible to everyone on the event page."
 
-#: src/components/routes/event/Translations/index.tsx:125
-msgid "Visitors whose language has no translation see this language. Without a fallback they see your original texts."
-msgstr "Visitors whose language has no translation see this language. Without a fallback they see your original texts."
+#: src/components/routes/event/Translations/index.tsx:137
+msgid "Visitors whose language has no translation see this language."
+msgstr "Visitors whose language has no translation see this language."
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:104
 msgid "VK"

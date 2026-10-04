@@ -35,6 +35,10 @@ msgstr "(空)"
 msgid "(none)"
 msgstr "（無）"
 
+#: src/components/routes/event/Translations/index.tsx:91
+msgid "(original texts)"
+msgstr "（原文）"
+
 #: src/components/common/ReportTable/index.tsx:328
 msgid "{0}"
 msgstr "{0}"
@@ -2496,10 +2500,6 @@ msgstr "按此重新發售"
 #: src/components/common/AttendeeTable/index.tsx:173
 msgid "Click to view notes"
 msgstr "點擊查看備註"
-
-#: src/components/routes/product-widget/SelectProducts/index.tsx:956
-#~ msgid "close"
-#~ msgstr "關閉"
 
 #: src/components/common/SideDrawer/index.tsx:117
 #: src/components/forms/ProductForm/ProductDrawer.tsx:100
@@ -5207,7 +5207,7 @@ msgstr "圖片上傳失敗。請再試一次。"
 msgid "Failed to verify email"
 msgstr "驗證電郵失敗"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Fallback for other languages"
 msgstr "其他語言的後備語言"
 
@@ -6348,11 +6348,11 @@ msgstr "標籤更新"
 msgid "Language"
 msgstr "語言"
 
-#: src/components/routes/event/Translations/index.tsx:104
+#: src/components/routes/event/Translations/index.tsx:108
 msgid "Language of your texts"
 msgstr "您文字的語言"
 
-#: src/components/routes/event/Translations/index.tsx:95
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Languages saved"
 msgstr "語言已儲存"
 
@@ -7529,7 +7529,6 @@ msgstr "未編輯"
 #: src/components/common/PromoCodeTable/index.tsx:82
 #: src/components/forms/ProductForm/ledgerSummaries.ts:92
 #: src/components/forms/ProductForm/ledgerSummaries.ts:134
-#: src/components/routes/event/Translations/index.tsx:129
 #: src/components/routes/product-widget/CollectInformation/index.tsx:541
 msgid "None"
 msgstr "無"
@@ -8251,7 +8250,7 @@ msgstr "主辦方"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "組織者只能管理活動和產品。他們無法管理用户、賬户設置或賬單信息。"
 
-#: src/components/routes/event/Translations/index.tsx:256
+#: src/components/routes/event/Translations/index.tsx:277
 msgid "Original changed"
 msgstr "原文已更改"
 
@@ -9798,7 +9797,7 @@ msgstr "星期六"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:133
+#: src/components/routes/event/Translations/index.tsx:154
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9817,7 +9816,7 @@ msgstr "保存"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:298
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "保存更改"
@@ -10780,8 +10779,8 @@ msgstr "出了點問題。請稍後再試。"
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:96
-#: src/components/routes/event/Translations/index.tsx:213
+#: src/components/routes/event/Translations/index.tsx:100
+#: src/components/routes/event/Translations/index.tsx:234
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12253,20 +12252,20 @@ msgstr "按歸因來源追蹤帳戶增長和表現"
 msgid "Tracking & Analytics"
 msgstr "追蹤與分析"
 
-#: src/components/routes/event/Translations/index.tsx:117
+#: src/components/routes/event/Translations/index.tsx:124
 msgid "Translate into"
 msgstr "翻譯為"
 
-#: src/components/routes/event/Translations/index.tsx:293
+#: src/components/routes/event/Translations/index.tsx:314
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "翻譯您的活動文字。訪客會以自己的語言查看。沒有翻譯的文字會使用後備語言或原文。"
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:294
+#: src/components/routes/event/Translations/index.tsx:315
 msgid "Translations"
 msgstr "翻譯"
 
-#: src/components/routes/event/Translations/index.tsx:212
+#: src/components/routes/event/Translations/index.tsx:233
 msgid "Translations saved"
 msgstr "翻譯已儲存"
 
@@ -12984,9 +12983,9 @@ msgstr "由 {start} 起可見 — 開售前保持隱藏。"
 msgid "Visible to everyone on the event page."
 msgstr "在活動頁面上對所有人可見。"
 
-#: src/components/routes/event/Translations/index.tsx:125
-msgid "Visitors whose language has no translation see this language. Without a fallback they see your original texts."
-msgstr "語言沒有翻譯的訪客會看到此語言。如果沒有後備語言，他們會看到原文。"
+#: src/components/routes/event/Translations/index.tsx:137
+msgid "Visitors whose language has no translation see this language."
+msgstr "語言沒有翻譯的訪客會看到此語言。"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:104
 msgid "VK"

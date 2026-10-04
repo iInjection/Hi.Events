@@ -35,6 +35,10 @@ msgstr "(leer)"
 msgid "(none)"
 msgstr "(keine)"
 
+#: src/components/routes/event/Translations/index.tsx:91
+msgid "(original texts)"
+msgstr "(Originaltexte)"
+
 #: src/components/common/ReportTable/index.tsx:328
 msgid "{0}"
 msgstr "{0}"
@@ -2496,10 +2500,6 @@ msgstr "Klicken, um wieder für den Verkauf zu öffnen"
 #: src/components/common/AttendeeTable/index.tsx:173
 msgid "Click to view notes"
 msgstr "Klicken, um Notizen anzuzeigen"
-
-#: src/components/routes/product-widget/SelectProducts/index.tsx:956
-#~ msgid "close"
-#~ msgstr "schließen"
 
 #: src/components/common/SideDrawer/index.tsx:117
 #: src/components/forms/ProductForm/ProductDrawer.tsx:100
@@ -5207,7 +5207,7 @@ msgstr "Fehler beim Hochladen des Bildes. Bitte versuchen Sie es erneut."
 msgid "Failed to verify email"
 msgstr "E-Mail konnte nicht verifiziert werden"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Fallback for other languages"
 msgstr "Ersatzsprache für andere Sprachen"
 
@@ -6348,11 +6348,11 @@ msgstr "Bezeichnungsänderungen"
 msgid "Language"
 msgstr "Sprache"
 
-#: src/components/routes/event/Translations/index.tsx:104
+#: src/components/routes/event/Translations/index.tsx:108
 msgid "Language of your texts"
 msgstr "Sprache Ihrer Texte"
 
-#: src/components/routes/event/Translations/index.tsx:95
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Languages saved"
 msgstr "Sprachen gespeichert"
 
@@ -7529,7 +7529,6 @@ msgstr "nicht bearbeitet"
 #: src/components/common/PromoCodeTable/index.tsx:82
 #: src/components/forms/ProductForm/ledgerSummaries.ts:92
 #: src/components/forms/ProductForm/ledgerSummaries.ts:134
-#: src/components/routes/event/Translations/index.tsx:129
 #: src/components/routes/product-widget/CollectInformation/index.tsx:541
 msgid "None"
 msgstr "Keine"
@@ -8251,7 +8250,7 @@ msgstr "Veranstalter"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "Organisatoren können nur Veranstaltungen und Produkte verwalten. Sie können keine Benutzer, Kontoeinstellungen oder Abrechnungsinformationen verwalten."
 
-#: src/components/routes/event/Translations/index.tsx:256
+#: src/components/routes/event/Translations/index.tsx:277
 msgid "Original changed"
 msgstr "Original geändert"
 
@@ -9798,7 +9797,7 @@ msgstr "Samstag"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:133
+#: src/components/routes/event/Translations/index.tsx:154
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9817,7 +9816,7 @@ msgstr "Speichern"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:298
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "Änderungen speichern"
@@ -10780,8 +10779,8 @@ msgstr "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:96
-#: src/components/routes/event/Translations/index.tsx:213
+#: src/components/routes/event/Translations/index.tsx:100
+#: src/components/routes/event/Translations/index.tsx:234
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12253,20 +12252,20 @@ msgstr "Verfolgen Sie das Kontowachstum und die Leistung nach Attributionsquelle
 msgid "Tracking & Analytics"
 msgstr "Tracking & Analytik"
 
-#: src/components/routes/event/Translations/index.tsx:117
+#: src/components/routes/event/Translations/index.tsx:124
 msgid "Translate into"
 msgstr "Übersetzen in"
 
-#: src/components/routes/event/Translations/index.tsx:293
+#: src/components/routes/event/Translations/index.tsx:314
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "Übersetzen Sie die Texte Ihrer Veranstaltung. Besucher sehen sie in ihrer Sprache. Texte ohne Übersetzung erscheinen in der Ersatzsprache oder im Original."
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:294
+#: src/components/routes/event/Translations/index.tsx:315
 msgid "Translations"
 msgstr "Übersetzungen"
 
-#: src/components/routes/event/Translations/index.tsx:212
+#: src/components/routes/event/Translations/index.tsx:233
 msgid "Translations saved"
 msgstr "Übersetzungen gespeichert"
 
@@ -12984,9 +12983,9 @@ msgstr "Sichtbar ab {start} – bis zum Verkaufsstart verborgen."
 msgid "Visible to everyone on the event page."
 msgstr "Für alle auf der Veranstaltungsseite sichtbar."
 
-#: src/components/routes/event/Translations/index.tsx:125
-msgid "Visitors whose language has no translation see this language. Without a fallback they see your original texts."
-msgstr "Besucher, für deren Sprache es keine Übersetzung gibt, sehen diese Sprache. Ohne Ersatzsprache sehen sie Ihre Originaltexte."
+#: src/components/routes/event/Translations/index.tsx:137
+msgid "Visitors whose language has no translation see this language."
+msgstr "Besucher, für deren Sprache es keine Übersetzung gibt, sehen diese Sprache."
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:104
 msgid "VK"

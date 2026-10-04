@@ -35,6 +35,10 @@ msgstr "(비어 있음)"
 msgid "(none)"
 msgstr "(없음)"
 
+#: src/components/routes/event/Translations/index.tsx:91
+msgid "(original texts)"
+msgstr "(원문)"
+
 #: src/components/common/ReportTable/index.tsx:328
 msgid "{0}"
 msgstr "{0}"
@@ -2496,10 +2500,6 @@ msgstr "클릭하여 판매 재개"
 #: src/components/common/AttendeeTable/index.tsx:173
 msgid "Click to view notes"
 msgstr "클릭하여 메모 보기"
-
-#: src/components/routes/product-widget/SelectProducts/index.tsx:956
-#~ msgid "close"
-#~ msgstr "닫기"
 
 #: src/components/common/SideDrawer/index.tsx:117
 #: src/components/forms/ProductForm/ProductDrawer.tsx:100
@@ -5207,7 +5207,7 @@ msgstr "이미지 업로드에 실패했습니다. 다시 시도해 주세요."
 msgid "Failed to verify email"
 msgstr "이메일 인증에 실패했습니다"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Fallback for other languages"
 msgstr "다른 언어의 대체 언어"
 
@@ -6348,11 +6348,11 @@ msgstr "라벨 업데이트"
 msgid "Language"
 msgstr "언어"
 
-#: src/components/routes/event/Translations/index.tsx:104
+#: src/components/routes/event/Translations/index.tsx:108
 msgid "Language of your texts"
 msgstr "텍스트 언어"
 
-#: src/components/routes/event/Translations/index.tsx:95
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Languages saved"
 msgstr "언어가 저장되었습니다"
 
@@ -7529,7 +7529,6 @@ msgstr "수정되지 않음"
 #: src/components/common/PromoCodeTable/index.tsx:82
 #: src/components/forms/ProductForm/ledgerSummaries.ts:92
 #: src/components/forms/ProductForm/ledgerSummaries.ts:134
-#: src/components/routes/event/Translations/index.tsx:129
 #: src/components/routes/product-widget/CollectInformation/index.tsx:541
 msgid "None"
 msgstr "없음"
@@ -8251,7 +8250,7 @@ msgstr "주최자"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "주최자는 이벤트와 상품만 관리할 수 있습니다. 사용자, 계정 설정, 청구 정보는 관리할 수 없습니다."
 
-#: src/components/routes/event/Translations/index.tsx:256
+#: src/components/routes/event/Translations/index.tsx:277
 msgid "Original changed"
 msgstr "원문 변경됨"
 
@@ -9798,7 +9797,7 @@ msgstr "토요일"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:133
+#: src/components/routes/event/Translations/index.tsx:154
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9817,7 +9816,7 @@ msgstr "저장"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:298
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "변경사항 저장"
@@ -10780,8 +10779,8 @@ msgstr "문제가 발생했습니다. 나중에 다시 시도해 주세요."
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:96
-#: src/components/routes/event/Translations/index.tsx:213
+#: src/components/routes/event/Translations/index.tsx:100
+#: src/components/routes/event/Translations/index.tsx:234
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12253,20 +12252,20 @@ msgstr "유입 경로별 계정 성장 및 성과를 추적하세요"
 msgid "Tracking & Analytics"
 msgstr "추적 및 분석"
 
-#: src/components/routes/event/Translations/index.tsx:117
+#: src/components/routes/event/Translations/index.tsx:124
 msgid "Translate into"
 msgstr "번역할 언어"
 
-#: src/components/routes/event/Translations/index.tsx:293
+#: src/components/routes/event/Translations/index.tsx:314
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "이벤트 텍스트를 번역하세요. 방문자는 자신의 언어로 보게 됩니다. 번역이 없는 텍스트는 대체 언어 또는 원문으로 표시됩니다."
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:294
+#: src/components/routes/event/Translations/index.tsx:315
 msgid "Translations"
 msgstr "번역"
 
-#: src/components/routes/event/Translations/index.tsx:212
+#: src/components/routes/event/Translations/index.tsx:233
 msgid "Translations saved"
 msgstr "번역이 저장되었습니다"
 
@@ -12984,9 +12983,9 @@ msgstr "{start}부터 표시됩니다. 판매 시작 전까지 숨겨집니다."
 msgid "Visible to everyone on the event page."
 msgstr "이벤트 페이지에서 모두에게 표시됩니다."
 
-#: src/components/routes/event/Translations/index.tsx:125
-msgid "Visitors whose language has no translation see this language. Without a fallback they see your original texts."
-msgstr "번역이 없는 언어의 방문자에게는 이 언어가 표시됩니다. 대체 언어가 없으면 원문이 표시됩니다."
+#: src/components/routes/event/Translations/index.tsx:137
+msgid "Visitors whose language has no translation see this language."
+msgstr "번역이 없는 언어의 방문자에게는 이 언어가 표시됩니다."
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:104
 msgid "VK"

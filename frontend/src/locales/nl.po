@@ -36,6 +36,10 @@ msgstr "(leeg)"
 msgid "(none)"
 msgstr "(geen)"
 
+#: src/components/routes/event/Translations/index.tsx:91
+msgid "(original texts)"
+msgstr "(oorspronkelijke teksten)"
+
 #: src/components/common/ReportTable/index.tsx:328
 msgid "{0}"
 msgstr "{0}"
@@ -2497,10 +2501,6 @@ msgstr "Klik om weer open te stellen voor verkoop"
 #: src/components/common/AttendeeTable/index.tsx:173
 msgid "Click to view notes"
 msgstr "Klik om notities te bekijken"
-
-#: src/components/routes/product-widget/SelectProducts/index.tsx:956
-#~ msgid "close"
-#~ msgstr "sluiten"
 
 #: src/components/common/SideDrawer/index.tsx:117
 #: src/components/forms/ProductForm/ProductDrawer.tsx:100
@@ -5208,7 +5208,7 @@ msgstr "Uploaden van afbeelding mislukt. Probeer het opnieuw."
 msgid "Failed to verify email"
 msgstr "Verifiëren e-mail mislukt"
 
-#: src/components/routes/event/Translations/index.tsx:124
+#: src/components/routes/event/Translations/index.tsx:136
 msgid "Fallback for other languages"
 msgstr "Reservetaal voor andere talen"
 
@@ -6349,11 +6349,11 @@ msgstr "labelupdates"
 msgid "Language"
 msgstr "Taal"
 
-#: src/components/routes/event/Translations/index.tsx:104
+#: src/components/routes/event/Translations/index.tsx:108
 msgid "Language of your texts"
 msgstr "Taal van je teksten"
 
-#: src/components/routes/event/Translations/index.tsx:95
+#: src/components/routes/event/Translations/index.tsx:99
 msgid "Languages saved"
 msgstr "Talen opgeslagen"
 
@@ -7530,7 +7530,6 @@ msgstr "niet bewerkt"
 #: src/components/common/PromoCodeTable/index.tsx:82
 #: src/components/forms/ProductForm/ledgerSummaries.ts:92
 #: src/components/forms/ProductForm/ledgerSummaries.ts:134
-#: src/components/routes/event/Translations/index.tsx:129
 #: src/components/routes/product-widget/CollectInformation/index.tsx:541
 msgid "None"
 msgstr "Geen"
@@ -8252,7 +8251,7 @@ msgstr "Organisatoren"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "Organisatoren kunnen alleen evenementen en producten beheren. Ze kunnen geen gebruikers, accountinstellingen of factureringsgegevens beheren."
 
-#: src/components/routes/event/Translations/index.tsx:256
+#: src/components/routes/event/Translations/index.tsx:277
 msgid "Original changed"
 msgstr "Origineel gewijzigd"
 
@@ -9799,7 +9798,7 @@ msgstr "Zaterdag"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
-#: src/components/routes/event/Translations/index.tsx:133
+#: src/components/routes/event/Translations/index.tsx:154
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:132
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -9818,7 +9817,7 @@ msgstr "Opslaan"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/event/Translations/index.tsx:277
+#: src/components/routes/event/Translations/index.tsx:298
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
 msgid "Save Changes"
 msgstr "Wijzigingen opslaan"
@@ -10781,8 +10780,8 @@ msgstr "Er is iets misgegaan. Probeer het later opnieuw."
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
-#: src/components/routes/event/Translations/index.tsx:96
-#: src/components/routes/event/Translations/index.tsx:213
+#: src/components/routes/event/Translations/index.tsx:100
+#: src/components/routes/event/Translations/index.tsx:234
 #: src/components/routes/my-tickets/index.tsx:162
 #: src/components/routes/profile/ManageProfile/index.tsx:96
 #: src/components/routes/profile/ManageProfile/index.tsx:110
@@ -12254,20 +12253,20 @@ msgstr "Volg accountgroei en prestaties per attributiebron"
 msgid "Tracking & Analytics"
 msgstr "Tracking & Analyse"
 
-#: src/components/routes/event/Translations/index.tsx:117
+#: src/components/routes/event/Translations/index.tsx:124
 msgid "Translate into"
 msgstr "Vertalen naar"
 
-#: src/components/routes/event/Translations/index.tsx:293
+#: src/components/routes/event/Translations/index.tsx:314
 msgid "Translate your event texts. Visitors see them in their language. Texts without a translation use the fallback language or your original text."
 msgstr "Vertaal de teksten van je evenement. Bezoekers zien ze in hun taal. Teksten zonder vertaling gebruiken de reservetaal of je oorspronkelijke tekst."
 
 #: src/components/layouts/Event/index.tsx:122
-#: src/components/routes/event/Translations/index.tsx:294
+#: src/components/routes/event/Translations/index.tsx:315
 msgid "Translations"
 msgstr "Vertalingen"
 
-#: src/components/routes/event/Translations/index.tsx:212
+#: src/components/routes/event/Translations/index.tsx:233
 msgid "Translations saved"
 msgstr "Vertalingen opgeslagen"
 
@@ -12985,9 +12984,9 @@ msgstr "Zichtbaar vanaf {start} — verborgen tot de verkoop opengaat."
 msgid "Visible to everyone on the event page."
 msgstr "Voor iedereen zichtbaar op de evenementpagina."
 
-#: src/components/routes/event/Translations/index.tsx:125
-msgid "Visitors whose language has no translation see this language. Without a fallback they see your original texts."
-msgstr "Bezoekers voor wiens taal geen vertaling bestaat, zien deze taal. Zonder reservetaal zien ze je oorspronkelijke teksten."
+#: src/components/routes/event/Translations/index.tsx:137
+msgid "Visitors whose language has no translation see this language."
+msgstr "Bezoekers voor wiens taal geen vertaling bestaat, zien deze taal."
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:104
 msgid "VK"

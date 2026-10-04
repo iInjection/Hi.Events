@@ -87,6 +87,9 @@ const SettingsCard = ({eventId, settings}: { eventId: string, settings: EventTra
 
     const allLocales = localeOptions();
     const otherLocales = allLocales.filter(option => option.value !== sourceLocale);
+    const fallbackOptions = allLocales.map(option => option.value === sourceLocale
+        ? {...option, label: `${option.label} ${t`(original texts)`}`}
+        : option);
 
     const save = () => {
         mutation.mutate({
@@ -131,17 +134,20 @@ const SettingsCard = ({eventId, settings}: { eventId: string, settings: EventTra
                 />
                 <Select
                     label={t`Fallback for other languages`}
-                    description={t`Visitors whose language has no translation see this language. Without a fallback they see your original texts.`}
-                    data={otherLocales}
-                    value={fallbackLocale}
+                    description={t`Visitors whose language has no translation see this language.`}
+                    data={fallbackOptions}
+                    value={fallbackLocale ?? sourceLocale}
+                    allowDeselect={false}
                     onChange={(value) => {
+                        if (!value || value === sourceLocale) {
+                            setFallbackLocale(null);
+                            return;
+                        }
                         setFallbackLocale(value);
-                        if (value && !locales.includes(value)) {
+                        if (!locales.includes(value)) {
                             setLocales(current => [...current, value]);
                         }
                     }}
-                    placeholder={t`None`}
-                    clearable
                     searchable
                 />
                 <Group justify="flex-end">
