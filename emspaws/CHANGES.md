@@ -16,7 +16,7 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 
 ## Changes
 
-### Buyers can edit selected answers on their order page (2026-10-04)
+### Buyers can edit selected answers on their order page (2026-10-04, `b24cb22e`)
 - New question switch "Buyers can edit this answer on their order page" (column
   `questions.is_buyer_editable`, default off; disabled while "Hide this question" is on, hidden
   questions are never shown to buyers). Copied when an event is duplicated.
