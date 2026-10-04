@@ -13,6 +13,8 @@ export const setAuthToken = (token?: string | undefined | null) => {
 };
 
 export const setRequestLocale = (locale: string) => {
-    api.defaults.headers.common['Accept-Language'] = locale;
-    publicApi.defaults.headers.common['Accept-Language'] = locale;
+    [api, publicApi].forEach(client => {
+        client.defaults.headers.common['Accept-Language'] = locale;
+        client.defaults.headers.common['Cookie'] = `locale=${encodeURIComponent(locale)}`;
+    });
 };

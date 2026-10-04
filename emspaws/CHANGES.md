@@ -16,6 +16,16 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 
 ## Changes
 
+### Language switcher works for logged-in users (2026-10-04)
+- Bug: logged-in organizers who used the public language switcher were switched back to their
+  profile language after the reload, because the profile language was enforced on every page load;
+  server-side rendering also let the profile language win over the chosen language.
+- Now: the profile language is applied once per browser (at login or when it changes in the
+  profile; remembered in localStorage `applied_profile_locale` as `userId:locale`). Afterwards the
+  switcher choice is kept. Server-side rendering forwards the choice as the `locale` cookie, so the
+  backend uses the same order as in the browser: chosen language → profile → browser language.
+- Files: `frontend/src/StartupChecks.tsx`, `frontend/src/utilites/apiClient.ts`
+
 ### Multilingual event content, phases 1 + 2 (2026-10-04, `592950f9`)
 - New event menu entry **Translations** (Setup & Design): per event choose the language of the
   texts, the languages to translate into and a fallback language; then translate per language.
