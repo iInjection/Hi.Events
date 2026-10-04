@@ -5,9 +5,11 @@ namespace HiEvents\Http\Actions\Events;
 use HiEvents\Resources\Event\EventResourcePublic;
 use HiEvents\Services\Application\Handlers\Event\DTO\GetPublicEventDTO;
 use HiEvents\Services\Application\Handlers\Event\GetPublicEventHandler;
+use HiEvents\Services\Domain\ContentTranslation\ContentTranslationService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\App;
 use Psr\Log\LoggerInterface;
 
 class GetEventPublicAction extends BasePublicEventAction
@@ -15,6 +17,7 @@ class GetEventPublicAction extends BasePublicEventAction
     public function __construct(
         private readonly GetPublicEventHandler $getPublicEventHandler,
         private readonly LoggerInterface $logger,
+        private readonly ContentTranslationService $contentTranslationService,
     ) {}
 
     public function __invoke(int $eventId, Request $request): Response|JsonResponse
@@ -34,6 +37,8 @@ class GetEventPublicAction extends BasePublicEventAction
 
             return $this->notFoundResponse();
         }
+
+        $this->contentTranslationService->translateEvent($event, App::getLocale());
 
         return $this->resourceResponse(EventResourcePublic::class, $event);
     }

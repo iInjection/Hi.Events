@@ -11,10 +11,10 @@ use HiEvents\Resources\Order\OrderResourcePublic;
 use HiEvents\Services\Application\Handlers\Order\CreateOrderHandler;
 use HiEvents\Services\Application\Handlers\Order\DTO\CreateOrderPublicDTO;
 use HiEvents\Services\Application\Handlers\Order\DTO\ProductOrderDetailsDTO;
-use HiEvents\Services\Application\Locale\LocaleService;
 use HiEvents\Services\Domain\Order\OrderCreateRequestValidationService;
 use HiEvents\Services\Infrastructure\Session\CheckoutSessionManagementService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\App;
 use Throwable;
 
 class CreateOrderActionPublic extends BaseAction
@@ -23,8 +23,6 @@ class CreateOrderActionPublic extends BaseAction
         private readonly CreateOrderHandler $orderHandler,
         private readonly OrderCreateRequestValidationService $orderCreateRequestValidationService,
         private readonly CheckoutSessionManagementService $sessionIdentifierService,
-        private readonly LocaleService $localeService,
-
     ) {}
 
     /**
@@ -49,7 +47,7 @@ class CreateOrderActionPublic extends BaseAction
                 'affiliate_code' => $request->input('affiliate_code'),
                 'products' => ProductOrderDetailsDTO::collectionFromArray($validatedData['products']),
                 'session_identifier' => $sessionId,
-                'order_locale' => $this->localeService->getLocaleOrDefault($request->getPreferredLanguage()),
+                'order_locale' => App::getLocale(),
             ])
         );
 

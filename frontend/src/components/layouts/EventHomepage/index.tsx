@@ -23,6 +23,7 @@ import {
 import {Anchor} from "@mantine/core";
 import {t} from "@lingui/macro";
 import {PoweredByFooter} from "../../common/PoweredByFooter";
+import {LanguageSwitcher} from "../../common/LanguageSwitcher";
 import {ContactOrganizerModal} from "../../common/ContactOrganizerModal";
 import {socialMediaConfig} from "../../../constants/socialMediaConfig";
 import {getGoogleMapsUrl, getShortLocationDisplay} from "../../../utilites/addressUtilities.ts";
@@ -705,6 +706,9 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                                 >
                                     {t`Terms of Service`}
                                 </Anchor>
+                            </div>
+                            <div className={classes.languageSwitcher}>
+                                <LanguageSwitcher/>
                             </div>
                             <PoweredByFooter className={classes.poweredByFooter}/>
                             <CookieSettingsLink/>

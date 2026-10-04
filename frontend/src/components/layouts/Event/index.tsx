@@ -9,6 +9,7 @@ import {
     IconExternalLink,
     IconEye,
     IconEyeOff,
+    IconLanguage,
     IconMailCheck,
     IconMailForward,
     IconPaint,
@@ -118,6 +119,7 @@ const EventLayout = () => {
         {link: 'homepage-designer', label: t`Homepage Designer`, icon: IconPaint},
         {link: 'ticket-designer', label: t`Ticket Designer`, icon: IconTicket},
         {link: 'questions', label: t`Registration Questions`, icon: IconUserQuestion},
+        {link: 'translations', label: t`Translations`, icon: IconLanguage},
 
         // 3. Ticketing & Sales
         {label: t`Ticketing & Sales`},

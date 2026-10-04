@@ -15,6 +15,8 @@ use Illuminate\Support\Str;
 
 class EventDomainObject extends Generated\EventDomainObjectAbstract implements IsFilterable, IsSortable
 {
+    private ?string $slug = null;
+
     private ?Collection $products = null;
 
     private ?Collection $productCategories = null;
@@ -122,7 +124,14 @@ class EventDomainObject extends Generated\EventDomainObjectAbstract implements I
 
     public function getSlug(): string
     {
-        return Str::slug($this->getTitle());
+        return $this->slug ?? Str::slug($this->getTitle());
+    }
+
+    public function setSlug(?string $slug): EventDomainObject
+    {
+        $this->slug = $slug;
+
+        return $this;
     }
 
     public function setImages(?Collection $images): EventDomainObject

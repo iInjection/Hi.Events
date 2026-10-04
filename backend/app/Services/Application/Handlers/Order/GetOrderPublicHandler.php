@@ -23,8 +23,10 @@ use HiEvents\Exceptions\UnauthorizedException;
 use HiEvents\Repository\Eloquent\Value\Relationship;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Order\DTO\GetOrderPublicDTO;
+use HiEvents\Services\Domain\ContentTranslation\ContentTranslationService;
 use HiEvents\Services\Domain\Order\OfflinePaymentInstructionsRenderService;
 use HiEvents\Services\Infrastructure\Session\CheckoutSessionManagementService;
+use Illuminate\Support\Facades\App;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 
 class GetOrderPublicHandler
@@ -33,6 +35,7 @@ class GetOrderPublicHandler
         private readonly OrderRepositoryInterface $orderRepository,
         private readonly CheckoutSessionManagementService $sessionIdentifierService,
         private readonly OfflinePaymentInstructionsRenderService $offlinePaymentInstructionsRenderService,
+        private readonly ContentTranslationService $contentTranslationService,
     ) {}
 
     public function handle(GetOrderPublicDTO $getOrderData): OrderDomainObject
@@ -52,6 +55,7 @@ class GetOrderPublicHandler
             $this->verifySessionId($order->getSessionId());
         }
 
+        $this->contentTranslationService->translateOrder($order, App::getLocale());
         $this->offlinePaymentInstructionsRenderService->renderForOrder($order);
 
         return $order;

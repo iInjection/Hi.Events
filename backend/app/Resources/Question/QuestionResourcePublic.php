@@ -19,6 +19,7 @@ class QuestionResourcePublic extends BaseResource
             'title' => $this->getTitle(),
             'description' => $this->getDescription(),
             'options' => $this->getOptions(),
+            'option_labels' => $this->getOptionLabels(),
             'required' => $this->getRequired(),
             'event_id' => $this->getEventId(),
             'belongs_to' => $this->getBelongsTo(),

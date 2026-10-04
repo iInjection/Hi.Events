@@ -20,6 +20,7 @@ import {showError, showInfo} from "../../../utilites/notifications.tsx";
 import {isDateInFuture, utcDateToEpochMs} from "../../../utilites/dates.ts";
 import {getCheckoutSessionIdentifier} from "../../../utilites/checkoutSession.ts";
 import {PoweredByFooter} from "../../common/PoweredByFooter";
+import {LanguageSwitcher} from "../../common/LanguageSwitcher";
 import {detectMode} from "../../../utilites/themeUtils.ts";
 import {CheckoutThemeProvider} from "./CheckoutThemeProvider.tsx";
 import {useOrganizerTrackingPixels} from "../../../hooks/useOrganizerTrackingPixels";
@@ -396,6 +397,9 @@ const Checkout = () => {
                         )}
                     </header>
                     <Outlet/>
+                    <div className={classes.languageSwitcher}>
+                        <LanguageSwitcher/>
+                    </div>
                     {isModal && currentStep !== 'summary' && (
                         <>
                             <PoweredByFooter style={{marginTop: '12px', paddingBottom: '16px'}}/>

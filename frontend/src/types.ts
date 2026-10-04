@@ -996,6 +996,7 @@ export interface Question {
     required: boolean;
     type: string;
     options: string[];
+    option_labels?: string[] | null;
     event_id?: number;
     products?: Product[];
     product_ids?: number[];

@@ -1,0 +1,50 @@
+.localeSwitcher {
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  margin: 0 0 var(--hi-spacing-lg);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.itemHeader {
+  row-gap: 2px;
+}
+
+.source {
+  padding: 8px 12px;
+  border-radius: var(--hi-radius-md);
+  background-color: var(--hi-color-gray-light, #f5f5f7);
+  font-size: var(--mantine-font-size-sm);
+}
+
+.textSource {
+  white-space: pre-line;
+}
+
+.htmlSource {
+  color: var(--mantine-color-dimmed);
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.saveBar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--hi-spacing-md) 0;
+  background: linear-gradient(to top, var(--mantine-color-body) 70%, transparent);
+}

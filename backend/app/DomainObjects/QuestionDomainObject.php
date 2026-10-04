@@ -9,6 +9,20 @@ class QuestionDomainObject extends Generated\QuestionDomainObjectAbstract
 {
     public ?Collection $products = null;
 
+    private ?array $optionLabels = null;
+
+    public function setOptionLabels(?array $optionLabels): self
+    {
+        $this->optionLabels = $optionLabels;
+
+        return $this;
+    }
+
+    public function getOptionLabels(): ?array
+    {
+        return $this->optionLabels;
+    }
+
     public function setProducts(?Collection $products): QuestionDomainObject
     {
         $this->products = $products;

@@ -17,6 +17,7 @@ use HiEvents\Repository\Eloquent\AttendeeCheckInRepository;
 use HiEvents\Repository\Eloquent\AttendeeRepository;
 use HiEvents\Repository\Eloquent\CapacityAssignmentRepository;
 use HiEvents\Repository\Eloquent\CheckInListRepository;
+use HiEvents\Repository\Eloquent\ContentTranslationRepository;
 use HiEvents\Repository\Eloquent\EmailTemplateRepository;
 use HiEvents\Repository\Eloquent\EventDailyStatisticRepository;
 use HiEvents\Repository\Eloquent\EventLocationRepository;
@@ -27,6 +28,7 @@ use HiEvents\Repository\Eloquent\EventRepository;
 use HiEvents\Repository\Eloquent\EventSettingsRepository;
 use HiEvents\Repository\Eloquent\EventSpamCheckRepository;
 use HiEvents\Repository\Eloquent\EventStatisticRepository;
+use HiEvents\Repository\Eloquent\EventTranslationSettingRepository;
 use HiEvents\Repository\Eloquent\ImageRepository;
 use HiEvents\Repository\Eloquent\InvoiceRepository;
 use HiEvents\Repository\Eloquent\LocationRepository;
@@ -76,6 +78,7 @@ use HiEvents\Repository\Interfaces\AttendeeCheckInRepositoryInterface;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\CapacityAssignmentRepositoryInterface;
 use HiEvents\Repository\Interfaces\CheckInListRepositoryInterface;
+use HiEvents\Repository\Interfaces\ContentTranslationRepositoryInterface;
 use HiEvents\Repository\Interfaces\EmailTemplateRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventDailyStatisticRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventLocationRepositoryInterface;
@@ -86,6 +89,7 @@ use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventSettingsRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventSpamCheckRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventStatisticRepositoryInterface;
+use HiEvents\Repository\Interfaces\EventTranslationSettingRepositoryInterface;
 use HiEvents\Repository\Interfaces\ImageRepositoryInterface;
 use HiEvents\Repository\Interfaces\InvoiceRepositoryInterface;
 use HiEvents\Repository\Interfaces\LocationRepositoryInterface;
@@ -152,6 +156,8 @@ class RepositoryServiceProvider extends ServiceProvider
         ProductPriceRepositoryInterface::class => ProductPriceRepository::class,
         EventStatisticRepositoryInterface::class => EventStatisticRepository::class,
         EventSpamCheckRepositoryInterface::class => EventSpamCheckRepository::class,
+        EventTranslationSettingRepositoryInterface::class => EventTranslationSettingRepository::class,
+        ContentTranslationRepositoryInterface::class => ContentTranslationRepository::class,
         EventDailyStatisticRepositoryInterface::class => EventDailyStatisticRepository::class,
         EventSettingsRepositoryInterface::class => EventSettingsRepository::class,
         OrganizerRepositoryInterface::class => OrganizerRepository::class,

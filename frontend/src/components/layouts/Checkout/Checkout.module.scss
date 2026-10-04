@@ -165,3 +165,9 @@ $header-row-padding-inline: 24px;
     color: var(--checkout-accent-contrast) !important;
   }
 }
+
+.languageSwitcher {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 8px;
+}

@@ -90,6 +90,9 @@ use HiEvents\Http\Actions\CheckInLists\Public\GetCheckInListStatsPublicAction;
 use HiEvents\Http\Actions\CheckInLists\UpdateCheckInListAction;
 use HiEvents\Http\Actions\Common\GetColorThemesAction;
 use HiEvents\Http\Actions\Common\Webhooks\StripeIncomingWebhookAction;
+use HiEvents\Http\Actions\ContentTranslations\GetEventContentTranslationsAction;
+use HiEvents\Http\Actions\ContentTranslations\UpdateEventTranslationSettingsAction;
+use HiEvents\Http\Actions\ContentTranslations\UpsertContentTranslationsAction;
 use HiEvents\Http\Actions\EmailTemplates\CreateEventEmailTemplateAction;
 use HiEvents\Http\Actions\EmailTemplates\CreateOrganizerEmailTemplateAction;
 use HiEvents\Http\Actions\EmailTemplates\DeleteEventEmailTemplateAction;
@@ -472,6 +475,10 @@ $router->middleware(['auth:api'])->group(
         $router->get('/events/{event_id}/affiliates/{affiliate_id}', GetAffiliateAction::class);
         $router->delete('/events/{event_id}/affiliates/{affiliate_id}', DeleteAffiliateAction::class);
         $router->post('/events/{event_id}/affiliates/export', ExportAffiliatesAction::class);
+
+        $router->get('/events/{event_id}/content-translations', GetEventContentTranslationsAction::class);
+        $router->put('/events/{event_id}/content-translations', UpsertContentTranslationsAction::class);
+        $router->put('/events/{event_id}/content-translations/settings', UpdateEventTranslationSettingsAction::class);
 
         // Messages
         $router->post('/events/{event_id}/messages', SendMessageAction::class);

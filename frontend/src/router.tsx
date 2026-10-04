@@ -426,6 +426,13 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "translations",
+                async lazy() {
+                    const Translations = await import("./components/routes/event/Translations");
+                    return { Component: Translations.default };
+                }
+            },
+            {
                 path: "orders",
                 async lazy() {
                     const Orders = await import("./components/routes/event/orders");

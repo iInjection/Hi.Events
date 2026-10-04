@@ -11,3 +11,8 @@ export const setAuthToken = (token?: string | undefined | null) => {
     api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     publicApi.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 };
+
+export const setRequestLocale = (locale: string) => {
+    api.defaults.headers.common['Accept-Language'] = locale;
+    publicApi.defaults.headers.common['Accept-Language'] = locale;
+};

@@ -25,13 +25,16 @@ interface CheckoutProductQuestionProps {
     index: number,
 }
 
+const getOptionLabel = (question: Partial<Question>, option: string, index: number): string =>
+    question.option_labels?.[index] || option;
+
 const DropDownInput = ({question, name, form}: QuestionInputProps) => {
     const items: ComboboxItem[] = [];
 
-    question.options?.map((option) => {
+    question.options?.map((option, index) => {
         items.push({
             value: option,
-            label: option,
+            label: getOptionLabel(question, option, index),
         })
     });
     return (
@@ -108,7 +111,7 @@ const RadioInput = ({question, name, form}: QuestionInputProps) => {
                     return (
                         <Radio
                             key={`${question.id}-radio-${index}`}
-                            label={option}
+                            label={getOptionLabel(question, option, index)}
                             value={option}
                         />
                     )
@@ -134,7 +137,7 @@ const CheckBoxInput = ({question, name, form}: QuestionInputProps) => {
                     return (
                         <Checkbox
                             key={`${question.id}-checkbox-${index}`}
-                            label={option}
+                            label={getOptionLabel(question, option, index)}
                             value={option}
                         />
                     )

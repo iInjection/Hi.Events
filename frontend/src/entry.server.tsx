@@ -4,7 +4,7 @@ import {dehydrate, QueryClient} from "@tanstack/react-query";
 
 import {router} from "./router";
 import {App} from "./App";
-import {setAuthToken} from "./utilites/apiClient.ts";
+import {setAuthToken, setRequestLocale} from "./utilites/apiClient.ts";
 import {createStaticHandler, createStaticRouter, StaticRouterProvider} from "react-router";
 import {dynamicActivateLocale} from "./locales.ts";
 import {setSsrQueryClient} from "./utilites/ssrQueryClient.ts";
@@ -26,6 +26,7 @@ export async function render(params: {
     res: express.Response;
 }) {
     setAuthToken(params.req.cookies.token);
+    setRequestLocale(getLocale(params.req));
 
     const queryClient = new QueryClient({
         defaultOptions: {

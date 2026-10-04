@@ -722,5 +722,7 @@
     "Event approved and published": "Veranstaltung genehmigt und veröffentlicht",
     "Event confirmed as spam": "Veranstaltung als Spam bestätigt",
     ":product is an add-on and can only be purchased with the product it belongs to": ":product ist ein Add-on und kann nur zusammen mit dem zugehörigen Produkt gekauft werden",
-    "You can add at most :max of :product for the selected tickets": "Für die ausgewählten Tickets können Sie höchstens :max × :product hinzufügen"
+    "You can add at most :max of :product for the selected tickets": "Für die ausgewählten Tickets können Sie höchstens :max × :product hinzufügen",
+    "This text cannot be translated for this event": "Dieser Text kann für diese Veranstaltung nicht übersetzt werden",
+    "Every answer option needs its own translation field": "Jede Antwortoption braucht ein eigenes Übersetzungsfeld"
 }
