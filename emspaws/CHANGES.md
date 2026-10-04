@@ -44,6 +44,8 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 - Tests: `tests/Unit/Services/Domain/ContentTranslation/ContentTranslationServiceTest.php`.
 - Limits: duplicating an event does not copy its translations; emails, PDF tickets, SEO texts and
   email templates are not translated yet (phase 3).
+- Layout tightened on 2026-10-04: the Translations page removes upstream's global input and card
+  bottom margins (`.compactInputs`, `.page` in `Translations.module.scss`) and uses smaller gaps.
 
 ### Profile language is applied (2026-10-03, `8aba7436`)
 - Problem (upstream bug): the language chosen under "Manage Profile" was never used. Startup

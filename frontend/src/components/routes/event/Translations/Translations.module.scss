@@ -3,14 +3,20 @@
   flex-wrap: wrap;
 }
 
+.compactInputs {
+  :global(.mantine-InputWrapper-root) {
+    margin-bottom: 0;
+  }
+}
+
 .sectionTitle {
-  margin: 0 0 var(--hi-spacing-lg);
+  margin: 0 0 var(--hi-spacing-sm);
 }
 
 .item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .itemHeader {
@@ -18,7 +24,7 @@
 }
 
 .source {
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: var(--hi-radius-md);
   background-color: var(--hi-color-gray-light, #f5f5f7);
   font-size: var(--mantine-font-size-sm);
@@ -47,4 +53,8 @@
   justify-content: flex-end;
   padding: var(--hi-spacing-md) 0;
   background: linear-gradient(to top, var(--mantine-color-body) 70%, transparent);
+}
+
+.page :global(.card) {
+  margin-bottom: 0;
 }

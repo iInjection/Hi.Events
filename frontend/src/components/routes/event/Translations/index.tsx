@@ -99,7 +99,7 @@ const SettingsCard = ({eventId, settings}: { eventId: string, settings: EventTra
 
     return (
         <Card>
-            <Stack gap="md">
+            <Stack gap="sm" className={classes.compactInputs}>
                 <Select
                     label={t`Language of your texts`}
                     data={allLocales}
@@ -155,7 +155,7 @@ const TranslationInput = ({item, value, onChange}: {
     if (item.format === 'LIST' && Array.isArray(item.source)) {
         const values = Array.isArray(value) ? value : item.source.map(() => '');
         return (
-            <Stack gap={6}>
+            <Stack gap={4}>
                 {item.source.map((option, index) => (
                     <TextInput
                         key={index}
@@ -217,7 +217,7 @@ const TranslationsEditor = ({eventId, items, locales}: {
     const progress = (target: string) => items.filter(item => item.translations[target]).length;
 
     return (
-        <Stack gap="lg">
+        <Stack gap="md">
             <SegmentedControl
                 className={classes.localeSwitcher}
                 value={locale}
@@ -242,7 +242,7 @@ const TranslationsEditor = ({eventId, items, locales}: {
                 return (
                     <Card key={section.title}>
                         <h3 className={classes.sectionTitle}>{section.title}</h3>
-                        <Stack gap="xl">
+                        <Stack gap="md" className={classes.compactInputs}>
                             {sectionItems.map(item => {
                                 const key = itemKey(item);
                                 return (
@@ -297,7 +297,7 @@ export const Translations = () => {
             {!isFetched && <LoadingMask/>}
 
             {isFetched && eventId && (
-                <Stack gap="lg">
+                <Stack gap="md" className={classes.page}>
                     <SettingsCard key={JSON.stringify(data?.settings)} eventId={eventId} settings={data?.settings ?? null}/>
                     {locales.length > 0 && data && (
                         <TranslationsEditor eventId={eventId} items={data.items} locales={locales}/>
