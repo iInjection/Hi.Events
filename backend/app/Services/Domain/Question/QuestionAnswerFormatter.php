@@ -6,8 +6,12 @@ use HiEvents\DomainObjects\Enums\QuestionTypeEnum;
 
 class QuestionAnswerFormatter
 {
-    public function getAnswerAsText(string|array $answer, QuestionTypeEnum $questionType): string
+    public function getAnswerAsText(string|array|null $answer, QuestionTypeEnum $questionType): string
     {
+        if ($answer === null) {
+            return '';
+        }
+
         if ($questionType === QuestionTypeEnum::ADDRESS) {
             $addressLines = [
                 $answer['address_line_1'] ?? null,

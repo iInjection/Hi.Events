@@ -46,6 +46,7 @@ readonly class DeleteQuestionHandler
 
         $existingAnswers = $this->questionAnswersRepository->findWhere([
             'question_id' => $questionId,
+            ['answer', 'not null', null],
         ]);
 
         if ($existingAnswers->isNotEmpty()) {
@@ -53,6 +54,8 @@ readonly class DeleteQuestionHandler
                 __('You cannot delete this question as there as answers associated with it. You can hide the question instead.'),
             );
         }
+
+        $this->questionAnswersRepository->forceDeleteUnansweredForQuestion($questionId);
 
         $this->questionAnswersRepository->deleteWhere([
             'question_id' => $questionId,

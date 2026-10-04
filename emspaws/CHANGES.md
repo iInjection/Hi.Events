@@ -16,6 +16,26 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
 
 ## Changes
 
+### Questions added later appear on existing registrations (2026-10-04)
+- Saving a registration question (create or edit) syncs it to existing registrations: every
+  completed order or order awaiting offline payment gets the question without an answer. Order
+  questions are added per order; ticket questions per attendee (cancelled attendees skipped);
+  questions on non-ticket products once per order that contains the product.
+- The organizer fills the answers in the order or attendee overview (existing edit icon). Buyers
+  do not see or edit these questions; webhook payloads contain them with an empty answer.
+- Changing the products of a question or deleting it removes only the empty rows that no longer
+  apply; given answers are never touched. A question can be deleted as long as nobody has
+  answered it (upstream blocked deletion as soon as any answer row existed).
+- Questions created before this change are synced the next time they are saved. Orders placed
+  later that skip an optional question also get it when the question is saved again.
+- Data: empty answers are rows in `question_answers` with `answer = NULL` (hard-deleted when
+  obsolete, because the `question_and_answer_views` view does not filter soft-deleted rows).
+- Files: `Services/Domain/Question/QuestionAnswerSyncService.php`, `Create/Edit/DeleteQuestionHandler`,
+  `QuestionAnswerRepository::forceDeleteUnansweredForQuestion`, nullable answers in
+  `QuestionAndAnswerViewDomainObject` and `QuestionAnswerFormatter`, empty-answer defaults in
+  `frontend/src/components/common/QuestionAndAnswerList`.
+- Tests: `tests/Unit/Services/Domain/Question/QuestionAnswerSyncServiceTest.php`.
+
 ### Language switcher works for logged-in users (2026-10-04, `24e07471`)
 - Bug: logged-in organizers who used the public language switcher were switched back to their
   profile language after the reload, because the profile language was enforced on every page load;

@@ -8,6 +8,7 @@ use HiEvents\DomainObjects\QuestionDomainObject;
 use HiEvents\Services\Application\Handlers\Question\DTO\UpsertQuestionDTO;
 use HiEvents\Services\Application\Handlers\Question\EditQuestionHandler;
 use HiEvents\Services\Domain\Question\EditQuestionService;
+use HiEvents\Services\Domain\Question\QuestionAnswerSyncService;
 use HiEvents\Services\Infrastructure\HtmlPurifier\HtmlPurifierService;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
@@ -34,7 +35,10 @@ class EditQuestionHandlerTest extends TestCase
                 return $question;
             });
 
-        $handler = new EditQuestionHandler($editQuestionService, $purifier);
+        $syncService = Mockery::mock(QuestionAnswerSyncService::class);
+        $syncService->shouldReceive('syncWithExistingOrders')->once();
+
+        $handler = new EditQuestionHandler($editQuestionService, $purifier, $syncService);
 
         $dto = new UpsertQuestionDTO(
             title: 'Dietary requirements',

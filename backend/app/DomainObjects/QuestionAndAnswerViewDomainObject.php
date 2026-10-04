@@ -43,7 +43,7 @@ class QuestionAndAnswerViewDomainObject extends AbstractDomainObject
 
     private ?string $attendee_email = null;
 
-    private array|string $answer;
+    private array|string|null $answer = null;
 
     private string $belongs_to;
 
@@ -107,12 +107,12 @@ class QuestionAndAnswerViewDomainObject extends AbstractDomainObject
         return $this;
     }
 
-    public function getAnswer(): string|array
+    public function getAnswer(): string|array|null
     {
         return $this->answer;
     }
 
-    public function setAnswer(array|string $answer): QuestionAndAnswerViewDomainObject
+    public function setAnswer(array|string|null $answer): QuestionAndAnswerViewDomainObject
     {
         $this->answer = $answer;
 

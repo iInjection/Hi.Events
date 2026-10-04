@@ -53,10 +53,11 @@ const QuestionItem = ({qa, isEditing, toggleEditMode, onEditAnswer, eventId, hid
     const errorHandler = useFormErrorResponseHandler();
     const updateAnswerMutation = useEditQuestionAnswer();
 
+    const emptyAnswer = qa.question_type === 'CHECKBOX' ? [] : '';
     const questionForm = useForm({
         initialValues: qa.question_type === 'ADDRESS'
-            ? {answer: qa.answer}
-            : {answer: {answer: qa.answer}},
+            ? {answer: qa.answer ?? {}}
+            : {answer: {answer: qa.answer ?? emptyAnswer}},
         transformValues: (values) => ({
             answer: qa.question_type !== 'ADDRESS' && values.answer && typeof values.answer === 'object' && 'answer' in values.answer
                 ? values.answer.answer
