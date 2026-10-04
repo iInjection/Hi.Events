@@ -56,6 +56,11 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
   email templates are not translated yet (phase 3).
 - Layout tightened on 2026-10-04: the Translations page removes upstream's global input and card
   bottom margins (`.compactInputs`, `.page` in `Translations.module.scss`) and uses smaller gaps.
+- Fallback choice fixed on 2026-10-04 (`9a746869`): the fallback list offers every language
+  except the language of the texts (before: only languages already under "Translate into", so
+  English was missing). Choosing a fallback adds it to "Translate into"; removing it there clears
+  the fallback. New events default to "Translate into: English, fallback: English" unless the
+  texts are English.
 
 ### Profile language is applied (2026-10-03, `8aba7436`)
 - Problem (upstream bug): the language chosen under "Manage Profile" was never used. Startup
