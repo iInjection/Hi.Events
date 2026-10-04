@@ -56,7 +56,7 @@ Newest entries first. After every upstream merge, re-check each entry under "Cha
   email templates are not translated yet (phase 3).
 - Layout tightened on 2026-10-04: the Translations page removes upstream's global input and card
   bottom margins (`.compactInputs`, `.page` in `Translations.module.scss`) and uses smaller gaps.
-- Fallback choice fixed on 2026-10-04 (`9a746869`, follow-up below): the fallback list offers
+- Fallback choice fixed on 2026-10-04 (`9a746869`, `fefdff4a`): the fallback list offers
   every language (before: only languages already under "Translate into", so English was missing).
   The language of the texts is listed as "<language> (original texts)" and is the default; it is
   stored as "no fallback". Choosing another language adds it to "Translate into"; removing it
